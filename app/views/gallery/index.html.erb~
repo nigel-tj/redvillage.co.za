@@ -1,0 +1,81 @@
+
+
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script type="text/javascript" src="js/modernizr.custom.53451.js"></script>
+<div class="container">
+  
+    <h1>Gallery</h1>
+    
+    
+    <section id="dg-container" class="dg-container">
+      <div class="dg-wrapper">
+        <a href="#"><img src="images/uploads/001.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/45.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/47.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/49.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/50.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/51.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/52.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/53.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/54.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/55.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/58.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/59.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/60.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/61.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/62.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/63.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/64.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/66.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/67.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/68.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/69.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/70.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/71.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/72.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/74.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/75.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/76.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/78.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/81.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/82.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/83.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/84.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/85.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/86.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/87.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/88.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/90.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/91.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/92.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/93.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/94.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/95.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/96.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/98.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/99.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/100.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/101.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/102.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/103.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/1345.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/105.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/106.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/109.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+        <a href="#"><img src="images/uploads/125.jpg" alt="image01"><div>http://www.colazionedamichy.it/</div></a>
+                
+      </div>
+      <nav>	
+        <span class="dg-prev">&lt;</span>
+      <span class="dg-next">&gt;</span>
+      </nav>
+    </section>
+</div>
+<script type="text/javascript" src="js/jquery.gallery.js"></script>
+<script type="text/javascript">
+  $(function() {
+  $('#dg-container').gallery();
+  });
+</script/>
+</body>
+</html>

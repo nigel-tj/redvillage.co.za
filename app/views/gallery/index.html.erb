@@ -1,0 +1,30 @@
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<script type="text/javascript" src="js/modernizr.custom.53451.js"></script>
+<div class="container">
+  
+    <h1>Gallery</h1>
+    <% @images.each do |image| %>
+    <a href="images/apple.jpg" title="Apple" data-gallery>1
+      
+    </a>
+    <% end %>
+    
+    <section id="dg-container" class="dg-container">
+      <div class="dg-wrapper">
+        
+                
+      </div>
+      <nav>	
+        <span class="dg-prev">&lt;</span>
+      <span class="dg-next">&gt;</span>
+      </nav>
+    </section>
+</div>
+<script type="text/javascript" src="js/jquery.gallery.js"></script>
+<script type="text/javascript">
+  $(function() {
+  $('#dg-container').gallery();
+  });
+</script/>
+</body>
+</html>
