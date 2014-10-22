@@ -135,9 +135,9 @@
 
 
                 <% @images.each do |image| %>
-                <div data-thumb="../images/slides/thumbs/bridge.jpg" data-src="../images/slides/bridge.jpg">
+                <div data-thumb="../images/slides/thumbs/bridge.jpg" data-src="images/uploads/Optimized-47.jpg">
                   <div class="camera_caption fadeFromBottom">
-                    Camera is a responsive/adaptive slideshow. <em>Try to resize the browser window</em>
+  
                   </div>
                 </div>
                 <% end %>
@@ -158,7 +158,9 @@
     </div>
 </div>
 <script type="text/javascript">
-    $(function () {
-        $('#js-news').ticker();
+  $(function () {
+    $('#js-news').ticker({
+    
     });
+  });
 </script>
