@@ -108,15 +108,21 @@
 	<div class="span4">
 	  <div class="content-block"><h2 class="pull-left">SOCIAL</h2>
             <ul class="pull-right toggle">
+              <li data-toggle-key="instagram"> 
+		<img src="images/insta-test.png"/>
+	      </li>
 	      <li data-toggle-key="twitter"> 
-		<img src="images/twitter-icon.png"/>
+		<img src="images/test.png"/>
 	      </li>
 	      <li data-toggle-key="facebook"> 
-		<img src="images/facebook-icon.png"/>
+		<img src="images/facebook-test.png"/>
 	      </li>
 	    </ul>
 	    <div class="clearfix"></div>
 	    <div class="section-content"> 
+              <div class="toggleable-item" data-toggle-key="instagram">
+                <iframe src="http://widget.websta.me/in/redcupvillage/?s=100&w=3&h=3&b=1&bg=FF0000&p=5" allowtransparency="true" frameborder="0" scrolling="no" style="border:none;overflow:hidden;width:345px; height: 345px" ></iframe> <!-- websta - web.stagram.com -->
+              </div>
               <div class="toggleable-item" data-toggle-key="facebook">
                 <div class="fb-like-box" data-href="https://www.facebook.com/TheRedcupvillage" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="true" data-show-border="false"></div>
               </div>
@@ -135,20 +141,14 @@
 
 
                 <% @images.each do |image| %>
-                <div data-thumb="../images/slides/thumbs/bridge.jpg" data-src="images/uploads/Optimized-47.jpg">
+                
+                <div data-thumb="images/uploads/thumb/<%= image.split('/').last %>" data-src="images/uploads/site-size/<%= image.split('/').last %>">
                   <div class="camera_caption fadeFromBottom">
-  
+                   <%= image %>
                   </div>
                 </div>
-                <% end %>
-
-
-
-
-                
+                <% end %> 
               </div><!-- #camera_wrap_1 -->
-
-    	      
             </div><!-- .fluid_container -->
             
             
@@ -162,5 +162,24 @@
     $('#js-news').ticker({
     
     });
+  });
+</script>
+<script>
+  jQuery(function(){
+  
+  jQuery('#camera_wrap_1').camera({
+  pagination: false,
+  thumbnails: false,
+  minHeight: '400px',
+  loaderColor: '#CE1F2B',
+  loaderStroke: 6
+  });
+  
+  jQuery('#camera_wrap_2').camera({
+  height: '400px',
+  loader: 'bar',
+  pagination: false,
+  thumbnails: true
+  });
   });
 </script>

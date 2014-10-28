@@ -1,4 +1,4 @@
-g<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-US">
   <head>
     <link rel="stylesheet" type="text/css" href="css/redvillage.css" media="all" />
@@ -6,7 +6,8 @@ g<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Red Village</title>
     <link rel="shortcut icon" href="images/favicon.ico" />
-    <script>var noError=function(msg,url,num){return true;} window.onerror=function(msg,url,num){return true;}</script>
+
+  <link href="http://getbootstrap.com/2.3.2/assets/js/google-code-prettify/prettify.css" rel="stylesheet" />
     <script type="text/javascript">var _gaq=_gaq||[];_gaq.push(['_setAccount','UA-9268496-3']);_gaq.push(['_trackPageview']);(function(){var ga=document.createElement('script');ga.type='text/javascript';ga.async=true;ga.src=('https:'==document.location.protocol?'https://ssl':'http://www')+'.google-analytics.com/ga.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(ga,s);})();</script>
     <link rel="alternate" type="application/rss+xml" title="Red Village &raquo; Home Comments Feed" href="home/feed/index.html" />
     <link rel='stylesheet' id='camera-css'  href='css/camera.css' type='text/css' media='all'>
@@ -53,30 +54,15 @@ g<!DOCTYPE html>
       max-width: 1000px;
       width: 90%;
       }
-        </style>
+    </style>
     
-    <script>
-      jQuery(function(){
-      
-      jQuery('#camera_wrap_1').camera({
-      thumbnails: true
-      });
-      
-      jQuery('#camera_wrap_2').camera({
-      height: '400px',
-      loader: 'bar',
-      pagination: false,
-      thumbnails: true
-      });
-      });
-    </script>
   </head>
   <body class="home page page-id-157 page-template page-template-home-php"> 
     <header>
       <div class="row-fluid">
         <div class="header-left"> 
-          <a id="newsletter-cta" class="hidden-phone"> <i class="icon-envelope icon-white"></i>&nbsp;&nbsp;&nbsp;SIGN UP NOW</a> 
-          <input placeholder="your@email.com" id="newsletter"/> <a id="newsletter-btn"><img src="images/icon-arrow.png"/></a>
+          <a id="newsletter-cta" class="demo btn btn-primary btn-large" data-toggle="modal" href="users#responsive"> <i class="icon-envelope icon-white"></i>&nbsp;&nbsp;&nbsp;SIGN UP NOW</a> 
+          <input placeholder="your@email.com" id="newsletter"/> <a id="newsletter-btn" ><img src="images/icon-arrow.png"/></a>
         </div>
 	
         <div class="header-right">
@@ -104,12 +90,12 @@ jQuery("#sf_53bd384492437 .sf_input").attr("class",jQuery("#sf_53bd384492437 .sf
       </div>
       
       <li class="nav-button-home"> 
-        <a href="index.html">
+        <a href="index">
 	  <div class="side side1">HOME</div>
           <div class="side side2">HOME</div> 
         </a>
       <li class="nav-button-sports"> 
-	<a href="#">
+	<a href="gallery">
 	  <div class="side side1">GALLERY</div>
 	  <div class="side side2">GALLERY</div> 
 	</a>

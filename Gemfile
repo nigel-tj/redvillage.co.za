@@ -38,3 +38,9 @@ gem 'spring',        group: :development
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
+#for image resizing
+gem 'imagery'
+gem 'bcrypt-ruby'
+gem 'bcrypt',               '3.1.7'
+
+gem 'bootstrap-sass'
