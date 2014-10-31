@@ -44,3 +44,5 @@ gem 'bcrypt-ruby'
 gem 'bcrypt',               '3.1.7'
 
 gem 'bootstrap-sass'
+
+gem 'rest-client'

@@ -1,30 +1,28 @@
-<link rel="stylesheet" type="text/css" href="css/style.css" />
-<script type="text/javascript" src="js/modernizr.custom.53451.js"></script>
-<div class="container">
-  
-    <h1>Gallery</h1>
-    <% @images.each do |image| %>
-    <a href="images/apple.jpg" title="Apple" data-gallery>1
-      
-    </a>
-    <% end %>
-    
-    <section id="dg-container" class="dg-container">
-      <div class="dg-wrapper">
-        
-                
+<div class="hidden-phone" id="masthead">
+  <div class="row-fluid max-width">
+    <h1>Bootstrap Image Gallery Demo</h1>
+    <form class="form-inline">
+      <div class="control-group">
+        <button id="video-gallery-button" type="button" class="btn btn-success">
+          <i class="glyphicon glyphicon-film"></i>
+          Launch Video Gallery
+        </button>
+        <button id="image-gallery-button" type="button" class="btn btn-primary">
+          <i class="glyphicon glyphicon-picture"></i>
+          Launch Image Gallery
+        </button>
       </div>
-      <nav>	
-        <span class="dg-prev">&lt;</span>
-      <span class="dg-next">&gt;</span>
-      </nav>
-    </section>
+    </form>
+    <br>
+    <!-- The container for the list of example images -->
+    <div id="links"></div>
+    <br>
+  </div>
 </div>
-<script type="text/javascript" src="js/jquery.gallery.js"></script>
-<script type="text/javascript">
-  $(function() {
-  $('#dg-container').gallery();
-  });
-</script/>
-</body>
-</html>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<!-- Bootstrap JS is not required, but included for the responsive demo navigation and button states -->
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+<script src="http://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
+<script src="js/bootstrap-image-gallery.js"></script>
+<script src="js/demo.js"></script>
+
