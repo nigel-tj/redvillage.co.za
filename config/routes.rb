@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'rest_client/deezer'
+
   get 'users/new'
   get 'gallery/index'
   get 'home/index'
