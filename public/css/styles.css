@@ -1,0 +1,75 @@
+body{
+background-color:#eee;
+}
+
+.footer {
+position: absolute;
+bottom: 0;
+height: 40px;
+margin:30px 0;
+background-color: #323737;
+}
+
+.custom-top-nav{
+padding-bottom:30px;
+padding-top:30px;
+}
+
+.navbar{
+border:0;
+border-radius:0;
+}
+.navbar-default {
+background-color: #323737;
+}
+
+.navbar-brand {
+float:none;
+padding:0;
+}
+
+.navbar-collapse{
+padding:0;
+}
+
+.navbar-brand>img {
+background-color:#fff;
+width:100%;
+}
+
+.navbar-nav, .navbar-nav>li{
+float: none;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+color: #fff;
+background-color: #c72c2c;
+}
+
+.navbar-default .navbar-nav > li > a {
+  border-bottom:1px solid #c72c2c;
+  color: #999;
+  font-weight:bold;
+  text-transform:uppercase;
+  text-align:center;
+  padding-bottom:14px;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+color: #fff;
+background-color: #c72c2c;
+}
+
+.custom-top-nav .col-xs-1, .custom-top-nav .col-sm-1, .custom-top-nav .col-md-1, .custom-top-nav .col-lg-1, .custom-top-nav .col-xs-2, .custom-top-nav .col-sm-2, .custom-top-nav .col-md-2, .custom-top-nav .col-lg-2, .custom-top-nav .col-xs-3, .custom-top-nav .col-sm-3, .custom-top-nav .col-md-3, .custom-top-nav .col-lg-3, .custom-top-nav .col-xs-4, .custom-top-nav .col-sm-4, .custom-top-nav .col-md-4, .custom-top-nav .col-lg-4, .custom-top-nav .col-xs-5, .custom-top-nav .col-sm-5, .custom-top-nav .col-md-5, .custom-top-nav .col-lg-5, .custom-top-nav .col-xs-6, .custom-top-nav .col-sm-6, .custom-top-nav .col-md-6, .custom-top-nav .col-lg-6, .custom-top-nav .col-xs-7, .custom-top-nav .col-sm-7, .custom-top-nav .col-md-7, .custom-top-nav .col-lg-7, .custom-top-nav .col-xs-8, .custom-top-nav .col-sm-8, .custom-top-nav .col-md-8, .custom-top-nav .col-lg-8, .custom-top-nav .col-xs-9, .custom-top-nav .col-sm-9, .custom-top-nav .col-md-9, .custom-top-nav .col-lg-9, .custom-top-nav .col-xs-10, .custom-top-nav .col-sm-10, .custom-top-nav .col-md-10, .custom-top-nav .col-lg-10, .custom-top-nav .col-xs-11, .custom-top-nav .col-sm-11, .custom-top-nav .col-md-11, .custom-top-nav .col-lg-11, .custom-top-nav .col-xs-12, .custom-top-nav .col-sm-12, .custom-top-nav .col-md-12, .custom-top-nav .col-lg-12 {
+padding:0;
+}
+
+.video-featured {
+height: 600px;
+}
+
+.video-thumbs {
+position: relative;
+overflow: visible;
+}
