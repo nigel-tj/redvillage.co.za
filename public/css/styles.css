@@ -76,3 +76,55 @@ margin-top:30px;
 color:#fff;
 text-transform:uppercase;
 }
+
+ul.toggle {
+    overflow:hidden;
+}
+
+ul.toggle li {
+
+    width:40px; height:30px;
+    background:#2c2c2c;
+    position:relative;
+    margin-right:1px;
+    float:left;
+    display:block;
+    cursor:pointer;
+    text-align:center;
+    overflow:hidden !important;
+
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+
+}
+
+ul.toggle li.active {
+
+    background:#FFF;
+}
+
+ul.toggle li img {
+    margin-top:-30px;
+
+     -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+ul.toggle li.active img {
+    margin-top:0px;
+}
+
+
+.toggle-label {
+    color: #FFFFFF;
+    line-height: 14px;
+    margin: 7px 11px 0 0;
+    text-align: right;
+    font-size:13px;
+}
