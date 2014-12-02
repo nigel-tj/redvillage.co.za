@@ -1,28 +1,37 @@
-<div class="hidden-phone" id="masthead">
-  <div class="row-fluid max-width">
-    <h1>Bootstrap Image Gallery Demo</h1>
-    <form class="form-inline">
-      <div class="control-group">
-        <button id="video-gallery-button" type="button" class="btn btn-success">
-          <i class="glyphicon glyphicon-film"></i>
-          Launch Video Gallery
-        </button>
-        <button id="image-gallery-button" type="button" class="btn btn-primary">
-          <i class="glyphicon glyphicon-picture"></i>
-          Launch Image Gallery
-        </button>
+<div class="col-lg-10 col-md-9 col-sm-12"> 
+  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+    </ol>
+    
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img src="images/slide-1.jpg" alt="red village image">
+        <div class="carousel-caption">
+          ...
+        </div>
       </div>
-    </form>
-    <br>
-    <!-- The container for the list of example images -->
-    <div id="links"></div>
-    <br>
+      <div class="item">
+        <img src="images/slide-1.jpg" alt="red village image">
+        <div class="carousel-caption">
+          ...
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<!-- Bootstrap JS is not required, but included for the responsive demo navigation and button states -->
-<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
-<script src="http://blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
-<script src="js/bootstrap-image-gallery.js"></script>
-<script src="js/demo.js"></script>
 
+
+
+<!-- <% @images.each do |image| %> -->
+
+<!-- <div data-thumb="images/uploads/thumb/<%= image.split('/').last %>" data-src="images/uploads/site-size/<%= image.split('/').last %>"> -->
+<!--   <div class="camera_caption fadeFromBottom"> -->
+<!--     <%= image %> -->
+<!--   </div> -->
+<!-- </div> -->
+<!-- <% end %>  -->

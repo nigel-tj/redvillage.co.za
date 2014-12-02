@@ -1,6 +1,0 @@
-class RestClientController < ApplicationController
-  require 'rest_client'
-
-  def deezer
-  end
-end

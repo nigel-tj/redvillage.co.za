@@ -1,5 +1,0 @@
-class GalleryController < ApplicationController
-  def index
-    @images = Dir.glob("images/uploads/*.jpg")
-  end
-end

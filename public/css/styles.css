@@ -1,24 +1,25 @@
 body{
-background-color:#eee;
+background:#eee url("/images/background.png") no-repeat fixed;
+background-size:100%;
 }
 
 .footer {
-position: absolute;
-bottom: 0;
-height: 40px;
-margin:30px 0;
+position:relative;
+margin-bottom:30px;
+margin-top:30px;
 background-color: #323737;
 }
 
 .custom-top-nav{
-padding-bottom:30px;
 padding-top:30px;
 }
 
 .navbar{
 border:0;
 border-radius:0;
+margin-bottom:0;
 }
+
 .navbar-default {
 background-color: #323737;
 }
@@ -65,11 +66,13 @@ background-color: #c72c2c;
 padding:0;
 }
 
-.video-featured {
-height: 600px;
+.front-content-blocks{
+background-color: #181818;
+padding:0 30px;
+margin-top:30px;
 }
 
-.video-thumbs {
-position: relative;
-overflow: visible;
+.front-content-blocks h1{
+color:#fff;
+text-transform:uppercase;
 }
