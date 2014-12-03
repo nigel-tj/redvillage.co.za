@@ -15,12 +15,15 @@
           ...
         </div>
       </div>
-      <div class="item">
-        <img src="images/slide-1.jpg" alt="red village image">
-        <div class="carousel-caption">
-          ...
+      <% @images.each do |image| %>
+        <div class="item">
+          <img src="images/uploads/<%= image.split('/').last %>" alt="red village image">
+          <div class="carousel-caption">
+            <%= image %>
+          </div>
         </div>
-      </div>
+      <% end %>
+      
     </div>
   </div>
 </div>
@@ -34,4 +37,4 @@
 <!--     <%= image %> -->
 <!--   </div> -->
 <!-- </div> -->
-<!-- <% end %>  -->
+<!-- <% end %> -->
