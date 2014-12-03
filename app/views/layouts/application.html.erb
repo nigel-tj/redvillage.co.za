@@ -83,14 +83,14 @@
                   <span class="icon-bar"></span>
                 </button>
 		<a class="navbar-brand" href="#">
-		  <img alt="Brand" src="images/red-village-logo.png">
+		  <img alt="Brand" src="images/red-village-logo.png" />
 		</a>	
               </div>
               
               <!-- Collect the nav links, forms, and other content for toggling -->
               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                  <li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
+                  <li class="active"><a href="index">Home<span class="sr-only">(current)</span></a></li>
                   <li><a href="gallery">Gallery</a></li>
                   <li><a href="#">News</a></li>
                   <li><a href="#">About</a></li>
@@ -108,13 +108,15 @@
             fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));</script>
           <%= yield %>
-          <footer class="footer">
-            <div class="row">
-	      <div class="col-sm-12">
-                <p class="text-muted">copyright details go here</p>
+          <div class="col-sm-12">
+            <footer class="footer">
+              <div class="row">
+	        <div class="col-sm-12">
+                  <p class="text-muted">copyright details go here</p>
+                </div>
               </div>
-            </div>
-          </footer>
+            </footer>
+          </div>
         </div>
       </div>
     </div>
