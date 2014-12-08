@@ -1,14 +1,15 @@
 <div class="col-lg-10 col-md-9 col-sm-12"> 
-  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-      <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-    </ol>
-    
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
+  <div class="col-sm-8">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+      </ol>
+      
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
       <div class="item active">
         <img src="images/slide-1.jpg" alt="red village image">
         <div class="carousel-caption">
@@ -16,25 +17,20 @@
         </div>
       </div>
       <% @images.each do |image| %>
-        <div class="item">
-          <img src="images/uploads/<%= image.split('/').last %>" alt="red village image">
-          <div class="carousel-caption">
-            <%= image %>
-          </div>
+      <div class="item">
+        <img src="images/uploads/<%= image.split('/').last %>" alt="red village image">
+        <div class="carousel-caption">
+          <%= image %>
         </div>
+      </div>
       <% end %>
       
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="front-content-blocks clearfix">
+      <h3>Comments</h3>
     </div>
   </div>
 </div>
-
-
-
-<!-- <% @images.each do |image| %> -->
-
-<!-- <div data-thumb="images/uploads/thumb/<%= image.split('/').last %>" data-src="images/uploads/site-size/<%= image.split('/').last %>"> -->
-<!--   <div class="camera_caption fadeFromBottom"> -->
-<!--     <%= image %> -->
-<!--   </div> -->
-<!-- </div> -->
-<!-- <% end %> -->
