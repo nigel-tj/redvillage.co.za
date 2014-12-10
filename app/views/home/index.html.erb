@@ -1,4 +1,3 @@
-
 <script type="text/javascript" src="assets/js/tickerme.min.js"></script>
 <div class="col-lg-10 col-md-9 col-sm-12"> 
   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -26,19 +25,22 @@
     </div>
   </div>
 </div>
-
 <div class="col-sm-12">
   <div class="front-content-blocks clearfix">
-      <ul id="ticker">
+    <div class="col-sm-2">
+      <img alt="Brand" src="images/red-village-logo-100.png" />
+    </div>
+    <div class="col-sm-10 ">      
+      <ul id="ticker" style="colol: red">
         <li>This is the first news story.</li>
         <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, molestiae.</li>
-        <li>Another news story.</li>
+          <li>Another news story.</li>
         <li>The final news story, with some more test text.</li>
-      </ul>    
+        </ul>    
+    </div>
   </div>
-</div>
-
-<!-- Youtube player -->
+</div
+   <!-- Youtube player -->
 
 <div class="col-sm-12">
   <div class="front-content-blocks clearfix">
@@ -51,36 +53,57 @@
   window.onload = function(){  
   window.controller = new YTV('frame', {
   user: 'TreeJTV',
-  accent: 'yellow'
+  accent: 'red'
   });
   
   };
 
 $('#ticker').tickerme();
 </script>
-  <!-- small boxes row  -->
-  <div class="clearfix"> 
-    <div class="col-sm-4"> 
-      <div class="front-content-blocks clearfix"> 
-        <h1>Instagram</h1> 
-       <!-- INSTANSIVE WIDGET -->
-    <script src="//instansive.com/widget/js/instansive.js"></script><iframe src="//instansive.com/widgets/452837b3af91b33df1578fd12d7332dd7c727480.html" id="instansive_452837b3af" name="instansive_452837b3af"  scrolling="no" allowtransparency="true" class="instansive-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
-      </div>	 
-    </div>	 
-
-    <div class="col-sm-4"> 
-      <div class="front-content-blocks clearfix"> 
-        <h1>Facebook</h1> 
-        <div class="fb-like-box" style="background-color:#fff;" data-href="https://www.facebook.com/TheRedCupVillage" data-height="500" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="true" data-show-border="false">
-        </div> 
+<div class="clearfix">
+  <div class="col-sm-4">
+    <div class="front-content-blocks clearfix">
+      <h1>Instagram</h1>
+      <!-- INSTANSIVE WIDGET -->
+      <script src="//instansive.com/widget/js/instansive.js"></script><iframe src="//instansive.com/widgets/452837b3af91b33df1578fd12d7332dd7c727480.html" id="instansive_452837b3af" name="instansive_452837b3af"  scrolling="no" allowtransparency="true" class="instansive-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+    </div>
+  </div>
+  
+  <div class="col-sm-4 front-content-blocks clearfix">
+    <h1>Social</h1>
+    <div class="btn-group" data-toggle="buttons">
+      <button type="button" title="facebook" class="btn btn-info active" style="background-image: url(/images/facebook.png);background-repeat: no-repeat;width: 100%;"></button>
+      <button type="button" title="twitter" class="btn btn-info" style="background-image: url(/images/twitter.png);background-repeat: no-repeat; width: 100%;"></button>
+    </div>
+    
+    <div  id="facebook">    
+      <div class="fb-like-box" style="background-color:#fff;" data-href="https://www.facebook.com/TheRedCupVillage" data-height="500" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="true" data-show-border="false">
       </div>
     </div>
-    <div class="col-sm-4"> 
-      <div class="front-content-blocks clearfix"> 
-        <h1>Twitter</h1> 
-        <a class="twitter-timeline"  href="https://twitter.com/Redcupvillage" data-widget-id="524525381504614402">Tweets by @Redcupvillage</a> 
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-      </div> 
-    </div> 
-
+    
+    
+    <div  id="twitter">
+      <a class="twitter-timeline"  href="https://twitter.com/Redcupvillage" data-widget-id="524525381504614402">Tweets by @Redcupvillage</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </div>
   </div>
+
+  <div class="col-sm-4">
+    <div class="front-content-blocks clearfix">
+      <h1>Music</h1>
+      <iframe scrolling="no" frameborder="0" allowTransparency="true" src="http://www.deezer.com/plugins/player?autoplay=false&playlist=true&width=270&height=500&cover=true&type=playlist&id=30595446&title=&format=vertical" width="270" height="500"></iframe>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  $('#twitter').hide();
+
+  $('.btn-group button').click(function(){
+    var ix = $(this).index();
+    $('#facebook').toggle( ix === 0 );
+    $('#twitter').toggle( ix === 1 );
+  });
+});
+</script>
