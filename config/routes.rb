@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
+  resources :events
+
   get 'rest_client/deezer'
 
   get 'users/new'
   get 'gallery/index'
   get 'home/index'
   get 'home/about_us'
-  mount Uploader::Engine => '/uploader'
+  get 'home/calendar'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -13,6 +15,8 @@ Rails.application.routes.draw do
   match 'about' => 'home#about_us', :as => 'about', :via => :get
   match 'gallery' => 'gallery#index', :as => 'gallery', :via => :get
   match 'users'   => 'users#new', :via => :get
+  match 'calendar'   => 'home#calendar', :via => :get
+
   # You can have the root of your site routed with "root"
   root 'home#index'
 

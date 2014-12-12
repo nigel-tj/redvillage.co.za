@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141208090433) do
+ActiveRecord::Schema.define(version: 20141208105118) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -64,6 +64,15 @@ ActiveRecord::Schema.define(version: 20141208090433) do
 
   add_index "books", ["author_id"], name: "index_books_on_author_id"
   add_index "books", ["genre_id"], name: "index_books_on_genre_id"
+
+  create_table "events", force: true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.datetime "start_time"
+    t.datetime "end_time"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "genres", force: true do |t|
     t.string   "name"
