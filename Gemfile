@@ -48,3 +48,5 @@ gem 'bootstrap-sass'
 gem 'rest-client'
 
 gem 'fullcalendar-rails'
+
+gem 'devise'

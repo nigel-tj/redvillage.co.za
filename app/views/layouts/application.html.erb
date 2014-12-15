@@ -25,6 +25,9 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="src/ytv.js"></script>
+    <%= csrf_meta_tag %>
+    <%= javascript_include_tag :application %>
+    <%= yield(:head) %>
   </head>
   <body>
 
@@ -98,6 +101,14 @@
               </div><!-- /.navbar-collapse -->
             </nav>
 	  </div>
+          <% if admin_signed_in? -%>
+          <div id="admin_login_box" style="float:left">
+          <%= current_admin.email %> |
+          <%= link_to 'Admin section', admins_path %> |
+          <%= link_to 'Sign out', destroy_admin_session_path, method: :delete %>
+          </div>
+          <% end -%>
+
           <div id="fb-root"></div>
           <script>(function(d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
