@@ -1,5 +1,5 @@
 class UploadsController < ApplicationController
-  before_action :set_upload, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_admin!, :set_upload, only: [:index, :new, :show, :edit, :update, :destroy]
 
   respond_to :html
 
@@ -21,9 +21,15 @@ class UploadsController < ApplicationController
   end
 
   def create
-    @upload = Upload.new(upload_params)
-    @upload.save
-    respond_with(@upload)
+    name = params[:upload][@original_filename]
+    directory = "public/images/uploads/"
+    path = File.join(directory, name.to_s)
+    File.open(path, "wb") { |f| f.write(params[:upload][:picture].read) }
+    flash[:notice] = "File uploaded"
+    redirect_to "/upload/new"
+    #@upload = Upload.new(upload_params)
+    #@upload.save
+    #respond_with(@upload)
   end
 
   def update
