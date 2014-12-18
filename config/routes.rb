@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :uploads
 
   namespace :admins do
@@ -18,7 +19,7 @@ Rails.application.routes.draw do
   get 'home/index'
   get 'home/about_us'
   get 'home/calendar'
-  
+  get 'user/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -26,10 +27,10 @@ Rails.application.routes.draw do
   match 'index' => 'home#index', :as => 'index', :via => :get
   match 'about' => 'home#about_us', :as => 'about', :via => :get
   match 'gallery' => 'gallery#index', :as => 'gallery', :via => :get
-  match 'users'   => 'users#new', :via => :get
   match 'calendar'   => 'home#calendar', :via => :get
   match 'admins' => 'admins#index', :via => :get
   match 'uploads' => 'uploads#new', :via => :get
+  match 'user' => 'user#index', :via => :get
   # You can have the root of your site routed with "root"
   root 'home#index'
 
