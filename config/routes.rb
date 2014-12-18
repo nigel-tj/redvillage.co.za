@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :uploads
+
   namespace :admins do
   get 'admins/index'
   end
@@ -16,6 +18,7 @@ Rails.application.routes.draw do
   get 'home/index'
   get 'home/about_us'
   get 'home/calendar'
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -26,6 +29,7 @@ Rails.application.routes.draw do
   match 'users'   => 'users#new', :via => :get
   match 'calendar'   => 'home#calendar', :via => :get
   match 'admins' => 'admins#index', :via => :get
+  match 'uploads' => 'uploads#new', :via => :get
   # You can have the root of your site routed with "root"
   root 'home#index'
 
