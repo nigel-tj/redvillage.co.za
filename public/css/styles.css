@@ -75,6 +75,15 @@ margin-top:30px;
 .front-content-blocks h1{
 color:#fff;
 text-transform:uppercase;
+margin: 0.67em 0;
+}
+
+.add-margin{
+margin: 2.5em 0;
+}
+
+#news, a #icon-pause{
+color:#999;
 }
 
 ul.toggle {
