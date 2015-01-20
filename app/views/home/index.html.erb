@@ -34,13 +34,18 @@
       <% end %>
 
     </div>
+    <% if user_signed_in? -%>
+    <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+    <% end -%>
   </div>
 
   <div>
-    <ul class="nav navbar-nav">
-      <li><a href="user">Sign In</a></li>
-      <li><a href="user">Sign Up</a></li>
-    </ul>
+    <% unless user_signed_in? -%>
+    <p><%= link_to 'Sign up', new_user_registration_path %></p>
+    <p><%= link_to 'Sign in', new_user_session_path %></p>
+    <% end -%>
+
+
   </div>
 
 </div>
