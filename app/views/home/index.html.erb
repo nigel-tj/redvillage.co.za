@@ -23,6 +23,16 @@
           Village is the new cool
         </div>
       </div>
+      
+      <% @images.each do |image| %>
+      <div class="item">
+        <img src="images/uploads/<%= image.split('/').last %>" alt="red village image">
+        <div class="carousel-caption">
+          <%= image %>
+        </div>
+      </div>
+      <% end %>
+
     </div>
   </div>
 </div>
@@ -78,7 +88,7 @@ $('#ticker').tickerme();
     <!--   <button type="button" title="twitter" class="btn btn-info" style="background-image: url(/images/twitter.png);background-repeat: no-repeat; width: 100%;"></button> -->
     <!-- </div> -->
     
-    <div  id="facebook">
+    <div  id="facebook" style="vertical-align: middle;">
       <div class="fb-like-box" style="background-color:#fff;" data-href="https://www.facebook.com/TheRedCupVillage" data-height="500" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="true" data-show-border="false">
       </div>
     </div>    
