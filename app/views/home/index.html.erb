@@ -1,4 +1,5 @@
 <script type="text/javascript" src="assets/js/tickerme.min.js"></script>
+<script src="http://jwpsrv.com/library/_VSPwqCOEeStYAp+lcGdIw.js"></script>
 <div class="col-lg-10 col-md-9 col-sm-12"> 
   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -13,13 +14,13 @@
       <div class="item active">
         <img src="images/slide-1.jpg" alt="red village image" />
         <div class="carousel-caption">
-          ...
+          Red Village Under Consruction
         </div>
       </div>
       <div class="item">
-        <img src="images/slide-1.jpg" alt="red village image" />
+        <img src="images/slide-2.jpg" alt="red village image" />
         <div class="carousel-caption">
-          ...
+          Village is the new cool
         </div>
       </div>
     </div>
@@ -42,22 +43,23 @@
 </div>
    <!-- Youtube player -->
 
-<div class="col-sm-12">
-  <div class="front-content-blocks clearfix">
-  <h1>Videos</h1>
-  <!-- youtube big screen goes here -->
-  <div id="frame"></div>
-  </div>
-</div>
-<script>
-  window.onload = function(){  
-  window.controller = new YTV('frame', {
-  user: 'TreeJTV',
-  accent: 'red'
-  });
-  
-  };
+<!-- <div class="col-sm-12"> -->
+<!--   <div class="front-content-blocks clearfix"> -->
+<!--   <h1>Videos</h1> -->
+<!--   <\!-- youtube big screen goes here -\-> -->
+<!--   <div id='playerDkmOInnSUxUh'></div> -->
+<!--   <script type='text/javascript'> -->
+<!--     jwplayer('playerDkmOInnSUxUh').setup({ -->
+<!--     file: '//www.youtube.com/watch?v=gveOLwl38Cg', -->
+<!--     title: 'E-Jay - Dead Gawdz 2 Freestyle (Official Video)', -->
+<!--     width: '100%', -->
+<!--     aspectratio: '16:9' -->
+<!--     }); -->
+<!--   </script> -->
+<!--   </div> -->
+<!-- </div> -->
 
+<script>
 $('#ticker').tickerme();
 </script>
 <div class="clearfix">
@@ -70,40 +72,38 @@ $('#ticker').tickerme();
   </div>
   
   <div class="col-sm-4 front-content-blocks clearfix">
-    <h1>Social</h1>
-    <div class="btn-group" data-toggle="buttons">
-      <button type="button" title="facebook" class="btn btn-info active" style="background-image: url(/images/facebook.png);background-repeat: no-repeat;width: 100%;"></button>
-      <button type="button" title="twitter" class="btn btn-info" style="background-image: url(/images/twitter.png);background-repeat: no-repeat; width: 100%;"></button>
-    </div>
+    <h1>Facebook</h1>
+    <!-- <div class="btn-group" data-toggle="buttons"> -->
+    <!--   <button type="button" title="facebook" class="btn btn-info active" style="background-image: url(/images/facebook.png);background-repeat: no-repeat;width: 100%;"></button> -->
+    <!--   <button type="button" title="twitter" class="btn btn-info" style="background-image: url(/images/twitter.png);background-repeat: no-repeat; width: 100%;"></button> -->
+    <!-- </div> -->
     
-    <div  id="facebook">    
+    <div  id="facebook">
       <div class="fb-like-box" style="background-color:#fff;" data-href="https://www.facebook.com/TheRedCupVillage" data-height="500" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="true" data-show-border="false">
       </div>
-    </div>
-    
-    
-    <div  id="twitter">
-      <a class="twitter-timeline"  href="https://twitter.com/Redcupvillage" data-widget-id="524525381504614402">Tweets by @Redcupvillage</a>
-      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-    </div>
+    </div>    
   </div>
 
   <div class="col-sm-4">
     <div class="front-content-blocks clearfix">
-      <h1>Arts</h1>
-      <iframe scrolling="no" frameborder="0" allowTransparency="true" src="http://www.deezer.com/plugins/player?autoplay=false&playlist=true&width=270&height=500&cover=true&type=playlist&id=30595446&title=&format=vertical" width="270" height="500"></iframe>
+      <h1>Twitter</h1>
+      <div  id="twitter">
+        <a class="twitter-timeline"  href="https://twitter.com/Redcupvillage" data-widget-id="524525381504614402">Tweets by @Redcupvillage</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      </div>
+      <!-- <iframe scrolling="no" frameborder="0" allowTransparency="true" src="http://www.deezer.com/plugins/player?autoplay=false&playlist=true&width=270&height=500&cover=true&type=playlist&id=30595446&title=&format=vertical" width="270" height="500"></iframe> -->
     </div>
   </div>
 </div>
 
-<script type="text/javascript">
-$(document).ready(function() {
-  $('#twitter').hide();
+<!-- <script type="text/javascript"> -->
+<!-- $(document).ready(function() { -->
+<!--   $('#twitter').hide(); -->
 
-  $('.btn-group button').click(function(){
-    var ix = $(this).index();
-    $('#facebook').toggle( ix === 0 );
-    $('#twitter').toggle( ix === 1 );
-  });
-});
-</script>
+<!--   $('.btn-group button').click(function(){ -->
+<!--     var ix = $(this).index(); -->
+<!--     $('#facebook').toggle( ix === 0 ); -->
+<!--     $('#twitter').toggle( ix === 1 ); -->
+<!--   }); -->
+<!-- }); -->
+<!-- </script> -->
