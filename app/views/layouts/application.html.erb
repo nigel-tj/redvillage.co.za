@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Red Village</title>
-    <%= favicon_link_tag image_path('favicon.ico') %>
+    <%= favicon_link_tag image_path('images/favicon.ico') %>
     <%= stylesheet_link_tag :all %>
     <%= csrf_meta_tag %>
     <%= javascript_include_tag :application %>
@@ -87,7 +87,7 @@
         
       </div>
     </nav>
-    <div class="clearfix"></div>
+    <br/>
     <div class="container">      
       <div class="row">
         <div class="custom-top-nav clearfix">
@@ -102,13 +102,13 @@
                   <span class="icon-bar"></span>
                 </button>			
               </div>
-              <a class="navbar-brand" href="index">
-	        <img alt="Brand" src="images/red-village-logo.png" />
+              <a class="navbar-brand" href="/index">
+	        <img alt="Brand" src="/images/red-village-logo.png" />
 	      </a>
               <!-- Collect the nav links, forms, and other content for toggling -->
               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                  <li class="active"><a href="/">Home<span class="sr-only">(current)</span></a></li>
+                  <li class="active"><a href="/index">Home<span class="sr-only">(current)</span></a></li>
                   <li><a href="gallery">Gallery</a></li>
                   <li><a href="calendar">Events</a></li>
                   <li><a href="#">About</a></li>
