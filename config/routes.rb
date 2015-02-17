@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  match 'index' => 'home#index', :as => 'index', :via => :get
+  match '/index' => 'home#index', :as => 'index', :via => :get
   match 'about' => 'home#about_us', :as => 'about', :via => :get
   match 'gallery' => 'gallery#index', :as => 'gallery', :via => :get
   match 'calendar'   => 'home#calendar', :via => :get
