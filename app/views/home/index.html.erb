@@ -1,5 +1,17 @@
 <script type="text/javascript" src="assets/js/tickerme.min.js"></script>
 <script src="http://jwpsrv.com/library/_VSPwqCOEeStYAp+lcGdIw.js"></script>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container-fluid">
+    <% unless user_signed_in? -%>
+    <%= link_to 'Sign up', new_user_registration_path %>
+    <%= link_to 'Sign in', new_user_session_path %>
+    <% end -%>
+
+    <% if user_signed_in? -%>
+    <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+    <% end -%>
+  </div>
+</nav>
 <div class="col-lg-10 col-md-9 col-sm-12"> 
   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -39,21 +51,8 @@
       </div>
       <% end %>
 
-    </div>
-    <% if user_signed_in? -%>
-    <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
-    <% end -%>
+    </div>  
   </div>
-
-  <div>
-    <% unless user_signed_in? -%>
-    <p><%= link_to 'Sign up', new_user_registration_path %></p>
-    <p><%= link_to 'Sign in', new_user_session_path %></p>
-    <% end -%>
-
-
-  </div>
-
 </div>
   <div class="col-sm-12">
 <div class="front-content-blocks clearfix">
@@ -75,7 +74,7 @@
    <div class="col-sm-12">
      <div class="front-content-blocks clearfix">
        <!-- "Video For Everybody" http://camendesign.com/code/video_for_everybody -->
-       <video id="a240e92d" class="sublime" poster="https://cdn.sublimevideo.net/vpa/ms_800.jpg" width="1080" height="780" title="Midnight Sun" data-uid="a240e92d" preload="none">
+       <video id="a240e92d" class="sublime" poster="https://cdn.sublimevideo.net/vpa/ms_800.jpg" width="640" height="360" title="Midnight Sun" data-uid="a240e92d" data-autoresize="fit" preload="none">
          <source src="https://cdn.sublimevideo.net/vpa/ms_360p.mp4" />
          <source src="https://cdn.sublimevideo.net/vpa/ms_720p.mp4" data-quality="hd" />
          <source src="https://cdn.sublimevideo.net/vpa/ms_360p.webm" />
@@ -102,28 +101,30 @@ $('#ticker').tickerme();
 </script>
 <div class="clearfix">
   <div class="col-sm-4">
-    <div class="front-content-blocks clearfix">
+    <div class="col-lg-4 front-content-blocks clearfix">
       <h1>Instagram</h1>
       <!-- INSTANSIVE WIDGET -->
       <script src="//instansive.com/widget/js/instansive.js"></script><iframe src="//instansive.com/widgets/452837b3af91b33df1578fd12d7332dd7c727480.html" id="instansive_452837b3af" name="instansive_452837b3af"  scrolling="no" allowtransparency="true" class="instansive-widget" style="width: 100%; border: 0; overflow: hidden; height:500px;"></iframe>
     </div>
   </div>
   
-  <div class="col-sm-4 front-content-blocks clearfix">
-    <h1>Facebook</h1>
-    <!-- <div class="btn-group" data-toggle="buttons"> -->
-    <!--   <button type="button" title="facebook" class="btn btn-info active" style="background-image: url(/images/facebook.png);background-repeat: no-repeat;width: 100%;"></button> -->
-    <!--   <button type="button" title="twitter" class="btn btn-info" style="background-image: url(/images/twitter.png);background-repeat: no-repeat; width: 100%;"></button> -->
-    <!-- </div> -->
-    
-    <div  id="facebook" style="vertical-align: middle;">
-      <div class="fb-like-box" style="background-color:#fff;" data-href="https://www.facebook.com/TheRedCupVillage" data-height="500" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="true" data-show-border="false">
-      </div>
-    </div>    
+  <div class="col-sm-4">
+    <div class="col-lg-4 front-content-blocks clearfix">
+      <h1>Facebook</h1>
+      <!-- <div class="btn-group" data-toggle="buttons"> -->
+      <!--   <button type="button" title="facebook" class="btn btn-info active" style="background-image: url(/images/facebook.png);background-repeat: no-repeat;width: 100%;"></button> -->
+      <!--   <button type="button" title="twitter" class="btn btn-info" style="background-image: url(/images/twitter.png);background-repeat: no-repeat; width: 100%;"></button> -->
+      <!-- </div> -->
+      
+      <div  id="facebook" style="vertical-align: middle;">
+        <div class="fb-like-box" style="background-color:#fff;" data-href="https://www.facebook.com/TheRedCupVillage" data-height="500" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="true" data-show-border="false">
+        </div>
+      </div>    
+    </div>
   </div>
 
   <div class="col-sm-4">
-    <div class="front-content-blocks clearfix">
+    <div class="col-lg-4 front-content-blocks clearfix">
       <h1>Twitter</h1>
       <div  id="twitter">
         <a class="twitter-timeline"  href="https://twitter.com/Redcupvillage" data-widget-id="524525381504614402">Tweets by @Redcupvillage</a>

@@ -72,6 +72,12 @@ padding:0 30px;
 margin-top:30px;
 }
 
+.col-lg-4.front-content-blocks{
+padding:0 30px;
+margin-top:30px;
+width:93%;
+}
+
 .front-content-blocks h1{
 color:#fff;
 text-transform:uppercase;
