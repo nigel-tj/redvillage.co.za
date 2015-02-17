@@ -1,17 +1,6 @@
 <script type="text/javascript" src="assets/js/tickerme.min.js"></script>
 <script src="http://jwpsrv.com/library/_VSPwqCOEeStYAp+lcGdIw.js"></script>
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container-fluid">
-    <% unless user_signed_in? -%>
-    <%= link_to 'Sign up', new_user_registration_path %>
-    <%= link_to 'Sign in', new_user_session_path %>
-    <% end -%>
 
-    <% if user_signed_in? -%>
-    <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
-    <% end -%>
-  </div>
-</nav>
 <div class="col-lg-10 col-md-9 col-sm-12"> 
   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->

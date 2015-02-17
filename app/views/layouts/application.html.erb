@@ -29,55 +29,69 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="http://jwpsrv.com/library/_VSPwqCOEeStYAp+lcGdIw.js"></script>
     <script type="text/javascript" src="src/ytv.js"></script>
-
+    
   </head>
   <body>
-
-<!--     <ul id="navigation"> -->
-<!--       <div class="navigation-top"> -->
-<!--       </div> -->
-      
-<!--       <li class="nav-button-home">  -->
-<!--         <a href="index"> -->
-<!-- 	  <div class="side side1">HOME</div> -->
-<!--           <div class="side side2">HOME</div>  -->
-<!--         </a> -->
-<!--       <li class="nav-button-sports">  -->
-<!-- 	<a href="gallery"> -->
-<!-- 	  <div class="side side1">GALLERY</div> -->
-<!-- 	  <div class="side side2">GALLERY</div>  -->
-<!-- 	</a> -->
-<!--       </li> -->
-<!--       <li class="nav-button-partners">  -->
-<!-- 	<a href="#"> -->
-<!-- 	  <div class="side side1">NEWS</div> -->
-<!-- 	  <div class="side side2">NEWS</div>  -->
-<!-- 	</a> -->
-<!--       </li> -->
-<!--       <li class="nav-button-allies">  -->
-<!-- 	<a href="#"> -->
-<!-- 	  <div class="side side1">ABOUT</div> -->
-<!-- 	  <div class="side side2">ABOUT</div>  -->
-<!-- 	</a> -->
-<!--       </li> -->
-<!--       <li class="nav-button-contact">  -->
-<!-- 	<a href="#"> -->
-<!-- 	  <div class="side side1">CONTACT</div> -->
-<!-- 	  <div class="side side2">CONTACT</div>  -->
-<!-- 	</a> -->
-<!--       </li> -->
-<!--       <div class="navigation-bottom"></div> -->
-<!--     </ul>  -->
-<!--     <a class="visible-phone" id="navigation-toggle"> -->
-<!--       <i class="icon-minus-sign icon-white expanded-state"></i> -->
-<!--       <i class="icon-plus-sign icon-white contracted-state"></i>&nbsp;&nbsp; -->
-<!--       <span class="contracted-state">Show</span> -->
-<!--       <span class="expanded-state">Hide</span> Menu</a> -->
-
-    <div class="container">
+    
+    <!--     <ul id="navigation"> -->
+    <!--       <div class="navigation-top"> -->
+    <!--       </div> -->
+    
+    <!--       <li class="nav-button-home">  -->
+    <!--         <a href="index"> -->
+    <!-- 	  <div class="side side1">HOME</div> -->
+    <!--           <div class="side side2">HOME</div>  -->
+    <!--         </a> -->
+    <!--       <li class="nav-button-sports">  -->
+    <!-- 	<a href="gallery"> -->
+    <!-- 	  <div class="side side1">GALLERY</div> -->
+    <!-- 	  <div class="side side2">GALLERY</div>  -->
+    <!-- 	</a> -->
+    <!--       </li> -->
+    <!--       <li class="nav-button-partners">  -->
+    <!-- 	<a href="#"> -->
+    <!-- 	  <div class="side side1">NEWS</div> -->
+    <!-- 	  <div class="side side2">NEWS</div>  -->
+    <!-- 	</a> -->
+    <!--       </li> -->
+    <!--       <li class="nav-button-allies">  -->
+    <!-- 	<a href="#"> -->
+    <!-- 	  <div class="side side1">ABOUT</div> -->
+    <!-- 	  <div class="side side2">ABOUT</div>  -->
+    <!-- 	</a> -->
+    <!--       </li> -->
+    <!--       <li class="nav-button-contact">  -->
+    <!-- 	<a href="#"> -->
+    <!-- 	  <div class="side side1">CONTACT</div> -->
+    <!-- 	  <div class="side side2">CONTACT</div>  -->
+    <!-- 	</a> -->
+    <!--       </li> -->
+    <!--       <div class="navigation-bottom"></div> -->
+    <!--     </ul>  -->
+    <!--     <a class="visible-phone" id="navigation-toggle"> -->
+    <!--       <i class="icon-minus-sign icon-white expanded-state"></i> -->
+    <!--       <i class="icon-plus-sign icon-white contracted-state"></i>&nbsp;&nbsp; -->
+    <!--       <span class="contracted-state">Show</span> -->
+    <!--       <span class="expanded-state">Hide</span> Menu</a> -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        
+        <% unless user_signed_in? -%>
+        <%= link_to '<button>Sign Up</button>'.html_safe, new_user_registration_path %>
+        <%= link_to '<button>Log In</button>'.html_safe, new_user_session_path %>
+        <% end -%>
+        
+        <% if user_signed_in? -%>
+        <%= link_to '<button>Log Out</button>'.html_safe, destroy_user_session_path, method: :delete %>
+        <% end -%>
+        
+      </div>
+    </nav>
+    <div class="clearfix"></div>
+    <div class="container">      
       <div class="row">
         <div class="custom-top-nav clearfix">
-	  <div class="col-lg-2 col-md-3 col-sm-4">
+          <div class="col-lg-2 col-md-3 col-sm-4">
             <nav class="navbar navbar-default" role="navigation">
               <!-- Brand and toggle get grouped for better mobile display -->
               <div class="navbar-header">
@@ -89,7 +103,7 @@
                 </button>			
               </div>
               <a class="navbar-brand" href="index">
-		<img alt="Brand" src="images/red-village-logo.png" />
+	        <img alt="Brand" src="images/red-village-logo.png" />
 	      </a>
               <!-- Collect the nav links, forms, and other content for toggling -->
               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -102,15 +116,15 @@
                 </ul>
               </div><!-- /.navbar-collapse -->
             </nav>
-	  </div>
+          </div>
           <% if admin_signed_in? -%>
           <div id="admin_login_box" style="float:left">
-          <%= current_admin.email %> |
-          <%= link_to 'Admin section', admins_path %> |
-          <%= link_to 'Sign out', destroy_admin_session_path, method: :delete %>
+            <%= current_admin.email %> |
+            <%= link_to 'Admin section', admins_path %> |
+            <%= link_to 'Sign out', destroy_admin_session_path, method: :delete %>
           </div>
           <% end -%>
-
+          
           <div id="fb-root"></div>
           <script>(function(d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
