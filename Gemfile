@@ -52,4 +52,5 @@ gem 'fullcalendar-rails'
 gem 'devise'
 gem 'autoprefixer-rails'
 
+gem 'jquery-fileupload-rails'
 gem 'carrierwave'

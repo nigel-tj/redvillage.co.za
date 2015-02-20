@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141218143747) do
+ActiveRecord::Schema.define(version: 20150220080217) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -40,13 +40,18 @@ ActiveRecord::Schema.define(version: 20141218143747) do
     t.datetime "updated_at"
   end
 
-  create_table "images", force: true do |t|
-    t.text     "description"
-    t.string   "name"
-    t.text     "comment"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+  create_table "image_comments", force: true do |t|
+    t.integer "image_id"
+    t.text    "comment"
   end
+
+  create_table "images", force: true do |t|
+    t.string  "name"
+    t.text    "image_path"
+    t.integer "album_id"
+  end
+
+  add_index "images", ["album_id"], name: "index_images_on_album_id"
 
   create_table "uploads", force: true do |t|
     t.string   "name"

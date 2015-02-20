@@ -84,7 +84,7 @@
         <% if user_signed_in? -%>
         <%= link_to '<button>Log Out</button>'.html_safe, destroy_user_session_path, method: :delete %>
         <% end -%>
-        
+
       </div>
     </nav>
     <br/>
@@ -134,17 +134,15 @@
             fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));</script>
           <%= yield %>
-          <div class="col-sm-12">
-            <footer class="footer">
-              <div class="row">
-	        <div class="col-sm-10 col-sm-offset-1" style="text-align: center;padding: 10px;">
-                  <span class="text-muted"><span style="color: #ff0000">RedVillage &reg;</span>
-                </div>
-              </div>
-            </footer>
-          </div>
         </div>
       </div>
     </div>
   </body>
+    <footer class="footer">
+      <div class="container-fluid">
+	<div class="col-sm-10 col-sm-offset-1" style="text-align: center;padding: 10px;">
+          <span class="text-muted"><span style="color: #ff0000">RedVillage &reg;</span>
+        </div>
+      </div>
+    </footer>
 </html>
