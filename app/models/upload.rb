@@ -1,3 +1,4 @@
 class Upload < ActiveRecord::Base
-  mount_uploader :picture, PictureUploader
+  has_many :attachment
+   accepts_nested_attributes_for :attachment
 end

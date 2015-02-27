@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
+
+  resources :documents
   devise_for :users
-  resources :uploads
 
   namespace :admins do
   get 'admins/index'
@@ -32,8 +33,8 @@ Rails.application.routes.draw do
   match 'uploads' => 'uploads#new', :via => :get
   match 'user' => 'user#index', :via => :get
   # You can have the root of your site routed with "root"
-  root 'home#index'
-
+  #root 'home#index'
+  root to: 'documents#new'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

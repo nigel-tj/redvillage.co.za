@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150220080217) do
+ActiveRecord::Schema.define(version: 20150220111813) do
 
   create_table "admins", force: true do |t|
     t.string   "email",                  default: "", null: false
@@ -30,6 +30,17 @@ ActiveRecord::Schema.define(version: 20150220080217) do
 
   add_index "admins", ["email"], name: "index_admins_on_email", unique: true
   add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
+
+  create_table "attachments", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "documents", force: true do |t|
+    t.string   "file"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "events", force: true do |t|
     t.string   "title"
@@ -52,6 +63,26 @@ ActiveRecord::Schema.define(version: 20150220080217) do
   end
 
   add_index "images", ["album_id"], name: "index_images_on_album_id"
+
+  create_table "post_attachments", force: true do |t|
+    t.integer  "post_id"
+    t.string   "avatar"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "posts", force: true do |t|
+    t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "upload_attachments", force: true do |t|
+    t.integer  "upload_id"
+    t.string   "upload_path"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "uploads", force: true do |t|
     t.string   "name"
