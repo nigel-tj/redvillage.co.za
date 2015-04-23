@@ -1,7 +1,4 @@
-<script type="text/javascript" src="assets/js/tickerme.min.js"></script>
-<script src="http://jwpsrv.com/library/_VSPwqCOEeStYAp+lcGdIw.js"></script>
-
-<div class="col-lg-10 col-md-9 col-sm-12"> 
+<div class="col-sm-12"> 
   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -13,19 +10,7 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="item active">
-        <img src="images/slide-1.jpg" alt="red village image" />
-        <div class="clearfix">
-          <div class="col-sm-4">
-            <div class="front-content-blocks clearfix">
-              <div class="carousel-caption">
-                <span style="color: #ff0000">Red Village Under Consruction</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <img src="images/slide-2.jpg" alt="red village image" />
+        <img src="images/slide-2.jpg" class="img-responsive center-block" alt="red village image" />
         <div class="carousel-caption">
           Village is the new cool
         </div>
@@ -33,7 +18,7 @@
       
       <% @images.each do |image| %>
       <div class="item">
-        <img src="images/uploads/<%= image.split('/').last %>" alt="red village image">
+        <img src="images/uploads/<%= image.split('/').last %>" class="img-responsive center-block" alt="red village image">
         <div class="carousel-caption">
           <%= image %>
         </div>
@@ -53,7 +38,6 @@
         <li>This is the first news story.</li>
         <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, molestiae.</li>
         <li>Another news story.</li>
-        <li>The final news story, with some more test text.</li>
       </ul>    
     </div>
   </div>
@@ -106,7 +90,7 @@ $('#ticker').tickerme();
       <!-- </div> -->
       
       <div  id="facebook" style="vertical-align: middle;">
-        <div class="fb-like-box" style="background-color:#fff;" data-href="https://www.facebook.com/TheRedCupVillage" data-height="500" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="true" data-show-border="false">
+        <div class="fb-like-box" style="background-color:#fff;" data-href="https://www.facebook.com/TheRedCupVillage" data-height="300" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="true" data-show-border="false">
         </div>
       </div>    
     </div>

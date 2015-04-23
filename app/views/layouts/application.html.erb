@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -29,6 +28,8 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="http://jwpsrv.com/library/_VSPwqCOEeStYAp+lcGdIw.js"></script>
     <script type="text/javascript" src="src/ytv.js"></script>
+    <script type="text/javascript" src="assets/js/tickerme.min.js"></script>
+    <script src="http://jwpsrv.com/library/_VSPwqCOEeStYAp+lcGdIw.js"></script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -40,233 +41,204 @@
       
     </script>
   </head>
-  <body>
-    
-    <!--     <ul id="navigation"> -->
-    <!--       <div class="navigation-top"> -->
-    <!--       </div> -->
-    
-    <!--       <li class="nav-button-home">  -->
-    <!--         <a href="index"> -->
-    <!-- 	  <div class="side side1">HOME</div> -->
-    <!--           <div class="side side2">HOME</div>  -->
-    <!--         </a> -->
-    <!--       <li class="nav-button-sports">  -->
-    <!-- 	<a href="gallery"> -->
-    <!-- 	  <div class="side side1">GALLERY</div> -->
-    <!-- 	  <div class="side side2">GALLERY</div>  -->
-    <!-- 	</a> -->
-    <!--       </li> -->
-    <!--       <li class="nav-button-partners">  -->
-    <!-- 	<a href="#"> -->
-    <!-- 	  <div class="side side1">NEWS</div> -->
-    <!-- 	  <div class="side side2">NEWS</div>  -->
-    <!-- 	</a> -->
-    <!--       </li> -->
-    <!--       <li class="nav-button-allies">  -->
-    <!-- 	<a href="#"> -->
-    <!-- 	  <div class="side side1">ABOUT</div> -->
-    <!-- 	  <div class="side side2">ABOUT</div>  -->
-    <!-- 	</a> -->
-    <!--       </li> -->
-    <!--       <li class="nav-button-contact">  -->
-    <!-- 	<a href="#"> -->
-    <!-- 	  <div class="side side1">CONTACT</div> -->
-    <!-- 	  <div class="side side2">CONTACT</div>  -->
-    <!-- 	</a> -->
-    <!--       </li> -->
-    <!--       <div class="navigation-bottom"></div> -->
-    <!--     </ul>  -->
-    <!--     <a class="visible-phone" id="navigation-toggle"> -->
-    <!--       <i class="icon-minus-sign icon-white expanded-state"></i> -->
-    <!--       <i class="icon-plus-sign icon-white contracted-state"></i>&nbsp;&nbsp; -->
-    <!--       <span class="contracted-state">Show</span> -->
-    <!--       <span class="expanded-state">Hide</span> Menu</a> -->
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="container-fluid">
-        
-        <% unless user_signed_in? -%>
-        <%= link_to '<button>Sign Up</button>'.html_safe, new_user_registration_path %>
-        <%= link_to '<button>Log In</button>'.html_safe, new_user_session_path %>
-        <% end -%>
-        
-        <% if user_signed_in? -%>
-        <%= link_to '<button>Log Out</button>'.html_safe, destroy_user_session_path, method: :delete %>
-        <% end -%>
-        <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-        </fb:login-button>
-        
-        <div id="status">
-        </div>
-        
-      </div>
-    </nav>
-    <br/>
+  <body>    
     <div class="container">      
-      <div class="row">
-        <div class="custom-top-nav clearfix">
-          <div class="col-lg-2 col-md-3 col-sm-4">
-            <nav class="navbar navbar-default" role="navigation">
-              <!-- Brand and toggle get grouped for better mobile display -->
-              <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>			
-              </div>
-              <a class="navbar-brand" href="/index">
-	        <img alt="Brand" src="/images/red-village-logo.png" />
-	      </a>
-              <!-- Collect the nav links, forms, and other content for toggling -->
-              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
+      <div class="row">      
+        <div class="col-xs-12">
+          <div class="login"> 
+            <div class="clearfix">
+            <div class="pull-right">
+            <% unless user_signed_in? -%>
+            <%= link_to '
+                <button type="button" class="btn btn-default btn-sm custom-btn">
+                  <span class="glyphicon glyphicon-user" aria-hidden="true"></span> 
+                  Sign Up
+                </button>
+                '.html_safe, new_user_registration_path %>
+            <%= link_to '
+                <button type="button" class="btn btn-default btn-sm custom-btn">
+                  <span class="glyphicon glyphicon-lock" aria-hidden="true"></span> 
+                  Log In
+                </button>
+                '.html_safe, new_user_session_path %>
+            <% end -%>
+            
+            <% if user_signed_in? -%>
+            <%= link_to '<button class="btn btn-default btn-sm custom-btn">Log Out</button>'.html_safe, destroy_user_session_path, method: :delete %>
+            <% end -%>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="navbar navbar-default" role="navigation">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>			
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="row">
+              <div class="col-md-5">
+                <ul class="nav navbar-nav pull-right">
                   <li class="active"><a href="/index">Home<span class="sr-only">(current)</span></a></li>
-                  <li><a href="calendar">Store</a></li>
-                  <li><a href="trends">Trending</a></li>
-                  <li><a href="music">Music</a></li>
-                  <li><a href="video">Videos</a></li>
-                  <li><a href="gallery">Gallery</a></li>
+                  <li><a href="about">About</a></li>
                   <li><a href="calendar">Events</a></li>
-                  <li><a href="lifeStyle">Lifestyle</a></li>
-                  <li><a href="#">About</a></li>
+                  <li><a href="gallery">Gallery</a></li>
+                  <li><a href="store">Store</a></li>
+                </ul>
+              </div>
+              <div class="col-md-2">
+                <a class="navbar-brand" href="/index">
+	          <img alt="Brand" class="img-responsive" src="/images/red-village-logo.png" />
+	        </a>
+              </div>
+              <div class="col-md-5">
+                <ul class="nav navbar-nav pull-left">
+                  <li><a href="trends">Trending</a></li>
+                  <li><a href="calendar">Music</a></li>
+                  <li><a href="lifeStyle">Videos</a></li>
+                  <li><a href="#">Stlye</a></li>
                   <li><a href="#">Contact</a></li>
                 </ul>
-              </div><!-- /.navbar-collapse -->
-            </nav>
-          </div>
-          <% if admin_signed_in? -%>
-          <div id="admin_login_box" style="float:left">
-            <%= current_admin.email %> |
-            <%= link_to 'Admin section', admins_path %> |
-            <%= link_to 'Sign out', destroy_admin_session_path, method: :delete %>
-          </div>
-          <% end -%>
-          
-          <div id="fb-root"></div>
-          <script>
-            // This is called with the results from from FB.getLoginStatus().
-            function statusChangeCallback(response) {
-            console.log('statusChangeCallback');
-            console.log(response);
-            // The response object is returned with a status field that lets the
-            // app know the current login status of the person.
-            // Full docs on the response object can be found in the documentation
-            // for FB.getLoginStatus().
-            if (response.status === 'connected') {
-            // Logged into your app and Facebook.
-            testAPI();
-            } else if (response.status === 'not_authorized') {
-            // The person is logged into Facebook, but not your app.
-            document.getElementById('status').innerHTML = 'Please log ' +
-            'into this app.';
-            } else {
-            // The person is not logged into Facebook, so we're not sure if
-            // they are logged into this app or not.
-            document.getElementById('status').innerHTML = 'Please log ' +
-            'into Facebook.';
-            }
-            }
-            
-            // This function is called when someone finishes with the Login
-            // Button.  See the onlogin handler attached to it in the sample
-            // code below.
-            function checkLoginState() {
-            FB.getLoginStatus(function(response) {
-            statusChangeCallback(response);
-            });
-            }
-            
-            window.fbAsyncInit = function() {
-            FB.init({
-            appId      : '1569438813325868',
-            cookie     : true,  // enable cookies to allow the server to access 
-            // the session
-            xfbml      : true,  // parse social plugins on this page
-            version    : 'v2.2' // use version 2.2
-            });
-            
-            // Now that we've initialized the JavaScript SDK, we call 
-            // FB.getLoginStatus().  This function gets the state of the
-            // person visiting this page and can return one of three states to
-            // the callback you provide.  They can be:
-            //
-            // 1. Logged into your app ('connected')
-            // 2. Logged into Facebook, but not your app ('not_authorized')
-            // 3. Not logged into Facebook and can't tell if they are logged into
-            //    your app or not.
-            //
-            // These three cases are handled in the callback function.
-            
-            FB.getLoginStatus(function(response) {
-            statusChangeCallback(response);
-            });
-            
-            };
-            
-            // Load the SDK asynchronously
-            (function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/en_US/sdk.js";
-            fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));
-            
-            // Here we run a very simple test of the Graph API after login is
-            // successful.  See statusChangeCallback() for when this call is made.
-            function testAPI() {
-            console.log('Welcome!  Fetching your information.... ');
-            FB.api('/me', function(response) {
-            console.log('Successful login for: ' + response.name);
-            document.getElementById('status').innerHTML =
-            'Thanks for logging in, ' + response.name + '!';
-            });
-            }
-          </script>
-          
-          <!--
-              Below we include the Login Button social plugin. This button uses
-              the JavaScript SDK to present a graphical Login button that triggers
-              the FB.login() function when clicked.
-            -->
-          
-                   
-          <script>
-            window.fbAsyncInit = function() {
-            FB.init({
-            appId      : '1569438813325868',
-            xfbml      : true,
-            version    : 'v2.3'
-            });
-            };
-            
-            (function(d, s, id){
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) {return;}
-            js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/en_US/sdk.js";
-            fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));
-          </script>
-          <script>(function(d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) return;
-            js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0";
-            fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));</script>
+              </div>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.navbar-collapse -->
+      </nav>
+    </div><!-- /.navbar-collapse -->
+    <% if admin_signed_in? -%>
+    <div id="admin_login_box" style="float:left">
+      <%= current_admin.email %> |
+      <%= link_to 'Admin section', admins_path %> |
+      <%= link_to 'Sign out', destroy_admin_session_path, method: :delete %>
+    </div>
+    <% end -%>
+    
+    <div id="fb-root"></div>
+    <script>
+      // This is called with the results from from FB.getLoginStatus().
+      function statusChangeCallback(response) {
+      console.log('statusChangeCallback');
+      console.log(response);
+      // The response object is returned with a status field that lets the
+      // app know the current login status of the person.
+      // Full docs on the response object can be found in the documentation
+      // for FB.getLoginStatus().
+      if (response.status === 'connected') {
+      // Logged into your app and Facebook.
+      testAPI();
+      } else if (response.status === 'not_authorized') {
+      // The person is logged into Facebook, but not your app.
+      document.getElementById('status').innerHTML = 'Please log ' +
+      'into this app.';
+      } else {
+      // The person is not logged into Facebook, so we're not sure if
+      // they are logged into this app or not.
+      document.getElementById('status').innerHTML = 'Please log ' +
+      'into Facebook.';
+      }
+      }
+      
+      // This function is called when someone finishes with the Login
+      // Button.  See the onlogin handler attached to it in the sample
+      // code below.
+      function checkLoginState() {
+      FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+      });
+      }
+      
+      window.fbAsyncInit = function() {
+      FB.init({
+      appId      : '1569438813325868',
+      cookie     : true,  // enable cookies to allow the server to access 
+      // the session
+      xfbml      : true,  // parse social plugins on this page
+      version    : 'v2.2' // use version 2.2
+      });
+      
+      // Now that we've initialized the JavaScript SDK, we call 
+      // FB.getLoginStatus().  This function gets the state of the
+      // person visiting this page and can return one of three states to
+      // the callback you provide.  They can be:
+      //
+      // 1. Logged into your app ('connected')
+      // 2. Logged into Facebook, but not your app ('not_authorized')
+      // 3. Not logged into Facebook and can't tell if they are logged into
+      //    your app or not.
+      //
+      // These three cases are handled in the callback function.
+      
+      FB.getLoginStatus(function(response) {
+      statusChangeCallback(response);
+      });
+      
+      };
+      
+      // Load the SDK asynchronously
+      (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+      
+      // Here we run a very simple test of the Graph API after login is
+      // successful.  See statusChangeCallback() for when this call is made.
+      function testAPI() {
+      console.log('Welcome!  Fetching your information.... ');
+      FB.api('/me', function(response) {
+      console.log('Successful login for: ' + response.name);
+      document.getElementById('status').innerHTML =
+      'Thanks for logging in, ' + response.name + '!';
+      });
+      }
+    </script>
+    
+    <!--
+        Below we include the Login Button social plugin. This button uses
+        the JavaScript SDK to present a graphical Login button that triggers
+        the FB.login() function when clicked.
+      -->
+    
+    
+    <script>
+      window.fbAsyncInit = function() {
+      FB.init({
+      appId      : '1569438813325868',
+      xfbml      : true,
+      version    : 'v2.3'
+      });
+      };
+      
+      (function(d, s, id){
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {return;}
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+      <div class="container">      
+        <div class="row">      
           <%= yield %>
         </div>
+<footer class="footer">
+  <p class="text-muted text-center"><span style="color: #900">RedVillage &reg;</span></p>
+</footer>
       </div>
-    </div>
   </body>
-    <footer class="footer">
-      <div class="container-fluid">
-	<div class="col-sm-10 col-sm-offset-1" style="text-align: center;padding: 10px;">
-          <span class="text-muted"><span style="color: #ff0000">RedVillage &reg;</span>
-        </div>
-      </div>
-    </footer>
 </html>
