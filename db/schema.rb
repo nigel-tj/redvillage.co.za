@@ -51,39 +51,6 @@ ActiveRecord::Schema.define(version: 20150220111813) do
     t.datetime "updated_at"
   end
 
-  create_table "image_comments", force: true do |t|
-    t.integer "image_id"
-    t.text    "comment"
-  end
-
-  create_table "images", force: true do |t|
-    t.string  "name"
-    t.text    "image_path"
-    t.integer "album_id"
-  end
-
-  add_index "images", ["album_id"], name: "index_images_on_album_id"
-
-  create_table "post_attachments", force: true do |t|
-    t.integer  "post_id"
-    t.string   "avatar"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "posts", force: true do |t|
-    t.string   "title"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "upload_attachments", force: true do |t|
-    t.integer  "upload_id"
-    t.string   "upload_path"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "uploads", force: true do |t|
     t.string   "name"
     t.text     "description"
