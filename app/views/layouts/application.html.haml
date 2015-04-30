@@ -44,20 +44,20 @@
             .clearfix
               .pull-right
                 - unless user_signed_in?
-                  = link_to '                                                           |
-                    <button type="button" class="btn btn-default btn-sm custom-btn">    |
-                      <span class="glyphicon glyphicon-user" aria-hidden="true"></span> |
-                      Sign Up                                                           |
-                    </button>                                                           |
-                    '.html_safe, new_user_registration_path                             |
-                  = link_to '                                                           |
-                    <button type="button" class="btn btn-default btn-sm custom-btn">    |
-                      <span class="glyphicon glyphicon-lock" aria-hidden="true"></span> |
-                      Log In                                                            |
-                    </button>                                                           |
-                    '.html_safe, new_user_session_path                                  |
-                - if user_signed_in?
-                  = link_to '<button class="btn btn-default btn-sm custom-btn">Log Out</button>'.html_safe, destroy_user_session_path, method: :delete
+                //   = link_to '                                                           |
+                //     <button type="button" class="btn btn-default btn-sm custom-btn">    |
+                //       <span class="glyphicon glyphicon-user" aria-hidden="true"></span> |
+                //       Sign Up                                                           |
+                //     </button>                                                           |
+                //     '.html_safe, new_user_registration_path                             |
+                //   = link_to '                                                           |
+                //     <button type="button" class="btn btn-default btn-sm custom-btn">    |
+                //       <span class="glyphicon glyphicon-lock" aria-hidden="true"></span> |
+                //       Log In                                                            |
+                //     </button>                                                           |
+                //     '.html_safe, new_user_session_path                                  |
+                // - if user_signed_in?
+                //   = link_to '<button class="btn btn-default btn-sm custom-btn">Log Out</button>'.html_safe, destroy_user_session_path, method: :delete
       %nav.navbar.navbar-default{:role => "navigation"}
         / Brand and toggle get grouped for better mobile display
         .navbar-header
@@ -78,7 +78,6 @@
                 %li
                   %a{:href => "about"} About
                 %li 
-                  = link_to "admin sign up" , new_admin_registration_path
                 %li
                   %a{:href => "calendar"} Events
                 %li
