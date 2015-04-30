@@ -1,0 +1,93 @@
+.col-sm-12
+  #carousel-example-generic.carousel.slide{"data-ride" => "carousel"}
+    / Indicators
+    %ol.carousel-indicators
+      %li.active{"data-slide-to" => "0", "data-target" => "#carousel-example-generic"}
+      %li{"data-slide-to" => "1", "data-target" => "#carousel-example-generic"}
+      %li{"data-slide-to" => "2", "data-target" => "#carousel-example-generic"}
+    / Wrapper for slides
+    .carousel-inner{:role => "listbox"}
+      .item.active
+        %img.img-responsive.center-block{:alt => "red village image", :src => "images/slide-2.jpg"}/
+        .carousel-caption
+          Village is the new cool
+      .item
+        %img.img-responsive.center-block{:alt => "red village image", :src => "images/uploads/banners/RCV+7STARS_scamp1A.jpg"}/
+        .carousel-caption
+          mariska
+      / <haml_silent> @images.each do |image| </haml_silent><haml_block>
+      / <div class="item">
+      / <img src="images/uploads/<haml_loud> image.split(&#39;/&#39;).last </haml_loud>" class="img-responsive center-block" alt="red village image">
+      / <div class="carousel-caption">
+      / <haml_loud> image </haml_loud>
+      / </div>
+      / </div>
+      / </haml_block>
+.col-sm-12
+  .front-content-blocks.clearfix
+    .col-sm-2
+      %h1 News
+    .col-sm-10.add-margin
+      %ul#ticker
+        %li This is the first news story.
+        %li Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, molestiae.
+        %li Another news story.
+/ player
+%script{:src => "//cdn.sublimevideo.net/js/kqur4mg1.js", :type => "text/javascript"}
+.col-sm-12
+  .front-content-blocks.clearfix
+    / "Video For Everybody" http://camendesign.com/code/video_for_everybody
+    %video#a240e92d.sublime{"data-autoresize" => "fit", "data-uid" => "a240e92d", :height => "360", :poster => "https://cdn.sublimevideo.net/vpa/ms_800.jpg", :preload => "none", :title => "Midnight Sun", :width => "640"}
+      %source{:src => "https://cdn.sublimevideo.net/vpa/ms_360p.mp4"}
+      %source{"data-quality" => "hd", :src => "https://cdn.sublimevideo.net/vpa/ms_720p.mp4"}
+      %source{:src => "https://cdn.sublimevideo.net/vpa/ms_360p.webm"}
+      %source{"data-quality" => "hd", :src => "https://cdn.sublimevideo.net/vpa/ms_720p.webm"}
+/ <h1>Videos</h1>
+/ <\!-- youtube big screen goes here -\->
+/ <div id='playerDkmOInnSUxUh'></div>
+/ <script type='text/javascript'>
+/ jwplayer('playerDkmOInnSUxUh').setup({
+/ file: '//www.youtube.com/watch?v=gveOLwl38Cg',
+/ title: 'E-Jay - Dead Gawdz 2 Freestyle (Official Video)',
+/ width: '100%',
+/ aspectratio: '16:9'
+/ });
+/ </script>
+/ </div>
+/ </div>
+:javascript
+  $('#ticker').tickerme();
+.clearfix
+  .col-sm-4
+    .col-lg-4.front-content-blocks.clearfix
+      %h1 Instagram
+      / INSTANSIVE WIDGET
+      %script{:src => "//instansive.com/widget/js/instansive.js"}
+      %iframe#instansive_452837b3af.instansive-widget{:allowtransparency => "true", :name => "instansive_452837b3af", :scrolling => "no", :src => "//instansive.com/widgets/452837b3af91b33df1578fd12d7332dd7c727480.html", :style => "width: 100%; border: 0; overflow: hidden; height:500px;"}
+  .col-sm-4
+    .col-lg-4.front-content-blocks.clearfix
+      %h1 Facebook
+      / <div class="btn-group" data-toggle="buttons">
+      / <button type="button" title="facebook" class="btn btn-info active" style="background-image: url(/images/facebook.png);background-repeat: no-repeat;width: 100%;"></button>
+      / <button type="button" title="twitter" class="btn btn-info" style="background-image: url(/images/twitter.png);background-repeat: no-repeat; width: 100%;"></button>
+      / </div>
+      #facebook{:style => "vertical-align: middle;"}
+        .fb-like-box{"data-colorscheme" => "light", "data-header" => "false", "data-height" => "300", "data-href" => "https://www.facebook.com/TheRedCupVillage", "data-show-border" => "false", "data-show-faces" => "true", "data-stream" => "true", :style => "background-color:#fff;"}
+  .col-sm-4
+    .col-lg-4.front-content-blocks.clearfix
+      %h1 Twitter
+      #twitter
+        %a.twitter-timeline{"data-widget-id" => "524525381504614402", :href => "https://twitter.com/Redcupvillage"} Tweets by @Redcupvillage
+        :javascript
+          !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+      / <iframe scrolling="no" frameborder="0" allowTransparency="true" src="http://www.deezer.com/plugins/player?autoplay=false&playlist=true&width=270&height=500&cover=true&type=playlist&id=30595446&title=&format=vertical" width="270" height="500"></iframe>
+/ <script type="text/javascript">
+/ $(document).ready(function() {
+/ $('#twitter').hide();
+/ $('.btn-group button').click(function(){
+/ var ix = $(this).index();
+/ $('#facebook').toggle( ix === 0 );
+/ $('#twitter').toggle( ix === 1 );
+/ });
+/ });
+/ </script>

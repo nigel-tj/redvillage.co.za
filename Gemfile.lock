@@ -55,12 +55,27 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    erb2haml (0.1.5)
+      html2haml
     erubis (2.7.0)
     execjs (2.2.1)
     fullcalendar-rails (2.2.3.0)
       jquery-rails (>= 3.1.1, < 5.0.0)
       momentjs-rails (~> 2.8, >= 2.8.3)
+    haml (4.0.6)
+      tilt
+    haml-rails (0.9.0)
+      actionpack (>= 4.0.1)
+      activesupport (>= 4.0.1)
+      haml (>= 4.0.6, < 5.0)
+      html2haml (>= 1.0.1)
+      railties (>= 4.0.1)
     hike (1.2.3)
+    html2haml (2.0.0)
+      erubis (~> 2.7.0)
+      haml (~> 4.0.0)
+      nokogiri (~> 1.6.0)
+      ruby_parser (~> 3.5)
     i18n (0.6.11)
     imagery (1.0.1)
     jbuilder (2.1.3)
@@ -78,11 +93,14 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.25.1)
+    mini_portile (0.6.2)
     minitest (5.4.1)
     momentjs-rails (2.8.3)
       railties (>= 3.1)
     multi_json (1.10.1)
     netrc (0.8.0)
+    nokogiri (1.6.6.2)
+      mini_portile (~> 0.6.0)
     orm_adapter (0.5.0)
     polyglot (0.3.5)
     rack (1.5.2)
@@ -111,6 +129,8 @@ GEM
     rest-client (1.7.2)
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
+    ruby_parser (3.6.6)
+      sexp_processor (~> 4.1)
     sass (3.2.19)
     sass-rails (4.0.3)
       railties (>= 4.0.0, < 5.0)
@@ -120,6 +140,7 @@ GEM
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    sexp_processor (4.5.1)
     spring (1.1.3)
     sprockets (2.11.0)
       hike (~> 1.2)
@@ -158,7 +179,9 @@ DEPENDENCIES
   carrierwave
   coffee-rails (~> 4.0.0)
   devise
+  erb2haml
   fullcalendar-rails
+  haml-rails
   imagery
   jbuilder (~> 2.0)
   jquery-fileupload-rails
