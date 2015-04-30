@@ -43,22 +43,7 @@
           .login
             .clearfix
               .pull-right
-                - unless user_signed_in?
-                //   = link_to '                                                           |
-                //     <button type="button" class="btn btn-default btn-sm custom-btn">    |
-                //       <span class="glyphicon glyphicon-user" aria-hidden="true"></span> |
-                //       Sign Up                                                           |
-                //     </button>                                                           |
-                //     '.html_safe, new_user_registration_path                             |
-                //   = link_to '                                                           |
-                //     <button type="button" class="btn btn-default btn-sm custom-btn">    |
-                //       <span class="glyphicon glyphicon-lock" aria-hidden="true"></span> |
-                //       Log In                                                            |
-                //     </button>                                                           |
-                //     '.html_safe, new_user_session_path                                  |
-                // - if user_signed_in?
-                //   = link_to '<button class="btn btn-default btn-sm custom-btn">Log Out</button>'.html_safe, destroy_user_session_path, method: :delete
-      %nav.navbar.navbar-default{:role => "navigation"}
+              
         / Brand and toggle get grouped for better mobile display
         .navbar-header
           %button.navbar-toggle.collapsed{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
