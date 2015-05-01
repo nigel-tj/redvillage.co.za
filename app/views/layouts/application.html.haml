@@ -8,8 +8,8 @@
     %title Red Village
    
     
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
   
     / Bootstrap
    
@@ -44,10 +44,26 @@
     / /#sidebar-wrapper
      
       
-
-    .container
-      .row
-        = yield
+    #page-content-wrapper
+      %button.hamburger.is-closed{"data-toggle"=>"offcanvas", :type => "button"}
+        %span.hamb-top
+        %span.hamb-middle
+        %span.hamb-bottom
+          .container
+            .row
+              .col-lg-12
+                #background-carousel
+                  #myCarousel.carousel.slide{"data-ride" => "carousel"}
+                    .carousel-inner
+                      .item.active.img-responsive{:style => "background-image:url(https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-xpf1/v/t1.0-9/10422592_1573637746252798_6109330068327264142_n.png?oh=38e25b1825a4ba469b3b6b3807e294f1&oe=5598312A&__gda__=1440796693_f56f0f0ae7b911ca58476f1f9c52d313)"}
+                      .item{:style => "background-image:url(https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-xpf1/v/t1.0-9/11149318_1592731857676720_2099283526807633735_n.jpg?oh=263417bb626415efb59cc738eb86331f&oe=559909CC&__gda__=1439669235_eb9f2874970bbd135a0b1a61ef7a7487)"}
+                      .item{:style => "background-image:url(http://placehold.it/1600x800/)"}
+                #content-wrapper
+                  / PAGE CONTENT
+                  .container
+                    
+                   
+                    = yield
       %footer.footer
         %p.text-muted.text-center
           %span{:style => "color: #900"} RedVillage ®
