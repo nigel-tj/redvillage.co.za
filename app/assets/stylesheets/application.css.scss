@@ -15,6 +15,7 @@
 @import "bootstrap-sprockets";
 @import "variables";
 @import "bootstrap";
+<<<<<<< HEAD
 @import "attachments";
 
 
@@ -137,3 +138,10 @@ body {
   }
 
 }
+=======
+
+@import "blueimp-gallery-all"
+@import "blueimp-gallery"
+@import "blueimp-gallery-indicator"
+@import "blueimp-gallery-video"
+>>>>>>> add bluimp gallerry
