@@ -15,22 +15,8 @@
 @import "bootstrap-sprockets";
 @import "variables";
 @import "bootstrap";
-body {
-/*css for full size background image*/
-  background: url(https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-xpf1/v/t1.0-9/10422592_1573637746252798_6109330068327264142_n.png?oh=38e25b1825a4ba469b3b6b3807e294f1&oe=5598312A&__gda__=1440796693_f56f0f0ae7b911ca58476f1f9c52d313) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  
-  height: 100%;
-  background-color: white;
-  color: #fff;
-  text-align: center;
-  text-shadow: 0 1px 3px rgba(0,0,0,.5);
-  
- 
-}
+@import "attachments";
+
 
 body {
     position: relative;
