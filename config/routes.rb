@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   end
 
   devise_for :admins
-
+  
 
   resources :events
   resources :admins, only: :index
