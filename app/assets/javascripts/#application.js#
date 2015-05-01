@@ -20,21 +20,20 @@ function hamburger_cross() {
     }
 }
 
-$('[data-toggle="offcanvas"]').click(function () {
-    $('#wrapper').toggleClass('toggled');
+$('[DATA-TOGGLE="OFFCANVAS"]').CLICK(FUNCTION () {
+    $('#WRAPPER').TOGGLECLASS('TOGGLED');
 });  
 
 //= require turbolinks
 //= require_tree .
-<<<<<<< HEAD
 //= require blueimp-gallery-all
 //= require blueimp-gallery
 //= require blueimp-gallery-fullscreen
 //= require blueimp-gallery-indicator
 //= require blueimp-gallery-video
 //= require jquery.blueimp-gallery
-=======
+
 $('#myCarousel').carousel({
 	pause: 'none'
 });
->>>>>>> 32a3a2137ad937ee6dcae31eee9b80399f722b7b
+
