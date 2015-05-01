@@ -4,6 +4,7 @@
 //= require bootstrap-sprockets
 
 //= require jquery_ujs
+<<<<<<< HEAD
 
 function hamburger_cross() {
     
@@ -37,4 +38,17 @@ $('[data-toggle="offcanvas"]').click(function () {
 $('#myCarousel').carousel({
 	pause: 'none'
 });
+<<<<<<< HEAD
 >>>>>>> 32a3a2137ad937ee6dcae31eee9b80399f722b7b
+=======
+=======
+//= require turbolinks
+//= require_tree .
+//= require blueimp-gallery-all
+//= require blueimp-gallery
+//= require blueimp-gallery-fullscreen
+//= require blueimp-gallery-indicator
+//= require blueimp-gallery-video
+//= require jquery.blueimp-gallery
+>>>>>>> add bluimp gallerry
+>>>>>>> serverfix

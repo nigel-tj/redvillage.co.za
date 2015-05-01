@@ -62,6 +62,10 @@ group :production do
   gem "pg"
   gem "rails_12factor"
 end
+<<<<<<< HEAD
 gem 'blueimp-gallery'
 gem "dropbox-api"
 gem 'multi_json'
+=======
+gem 'blueimp-gallery'
+>>>>>>> serverfix
