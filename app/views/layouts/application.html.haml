@@ -23,58 +23,49 @@
       ga('send', 'pageview');
   %body
     .container
-      .row
-        .col-xs-12
-          .login
-            .clearfix
-              .pull-right
+      .navbar
+        .navbar-inner
+          %a.brand{:href => "#"}
+            / UNCOMMENT THE CSS VALUES TO TEST OTHER DIMENTIONS
+            / <img src="http://placehold.it/150x80&text=Logo" alt="">
+            %img{:alt => "", :src => "http://placehold.it/150x50&text=Logo"}/
+          %a.btn.btn-navbar{"data-target" => ".nav-collapse", "data-toggle" => "collapse"}
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+          .nav-collapse.collapse
+            %ul.nav
+             
               
-        / Brand and toggle get grouped for better mobile display
-        .navbar-header
-          %button.navbar-toggle.collapsed{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
-            %span.sr-only Toggle navigation
-            %span.icon-bar
-            %span.icon-bar
-            %span.icon-bar
-        / Collect the nav links, forms, and other content for toggling
-        #bs-example-navbar-collapse-1.collapse.navbar-collapse
-          .row{:style => "height:0px"}
-            .col-md-5
-              %ul.nav.navbar-nav.pull-right
-                %li.active
-                  %a{:href => "/index"}
-                    Home
-                    %span.sr-only (current)
-                %li
-                  %a{:href => "about"} About
-                %li 
-                %li
-                  %a{:href => "calendar"} Events
-                %li
-                  %a{:href => "gallery"} Gallery
-                %li
-                  %a{:href => "/contact"} Contact
+              %li.active
+                %a{:href => "/index"}
+                  Home
+                  %span.sr-only (current)
+              %li
+                %a{:href => "about"} About
+              %li 
+              %li
+                %a{:href => "calendar"} Events
+              %li
+                %a{:href => "gallery"} Gallery
+              %li
+                %a{:href => "/contact"} Contact
             
-              %ul.nav.navbar-nav.pull-left
-                %li
-                  %a{:href => "store"} Store
-                %li
-                  %a{:href => "/trends"} Trending
-                %li
-                  %a{:href => "/music"} Music
-                %li
-                  %a{:href => "/lifestyle"} Stlye
-                %li
-                  %a{:href => "/videos"} Videos
-          / /.navbar-collapse
-        / /.navbar-collapse
-    / /.navbar-collapse
-    - if admin_signed_in?
-      #admin_login_box{:style => "float:left"}
-        = current_admin.email
-        |
-        \#{link_to 'Admin section', admins_path} |
-        \#{link_to 'Sign out', destroy_admin_session_path, method: :delete}
+            
+              %li
+                %a{:href => "store"} Store
+              %li
+                %a{:href => "/trends"} Trending
+              %li
+                %a{:href => "/music"} Music
+              %li
+                %a{:href => "/lifestyle"} Stlye
+              %li
+                %a{:href => "/videos"} Videos
+              
+             
+      
+      
 
     .container
       .row
