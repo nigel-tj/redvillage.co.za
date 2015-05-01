@@ -1,10 +1,12 @@
 
 
 //= require jquery
-//= require jquery_ujs
 //= require bootstrap-sprockets
-//= require menu-bar
 
+//= require jquery_ujs
 
 
 //= require_tree .
+$('#myCarousel').carousel({
+	pause: 'none'
+});
