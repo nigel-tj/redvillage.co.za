@@ -1,11 +1,43 @@
-%div.col-lg-10.col-md-9.col-sm-12
-  %div.blueimp-gallery#blueimp-gallery
-    %div.slides %div
-      %h3.title %h3
-       %a.prev ‹ %a
-       %a.next › %a
-       %a.close × %a
-       %a.play-pause %a
-       %ol.indicator %ol
-  %div
-%div
+.col-lg-10.col-md-9.col-sm-12
+  #blueimp-gallery.blueimp-gallery
+    .slides
+      %h3.title
+      %a.prev ‹
+      %a.next ›
+      %a.close ×
+      %a.play-pause
+      %ol.indicator
+#blueimp-gallery-carousel.blueimp-gallery.blueimp-gallery-carousel
+  .slides
+  %h3.title
+  %a.prev ‹
+  %a.next ›
+  %a.play-pause
+  %ol.indicator
+
+#links
+  %a{:href => "http://www.google.com/imgres?imgurl=http://cdn.boldride.com/land-rover/2015/land-rover-range-rover-evoque-autobiography-dynamic.2000x1333.Feb-17-2014_17.50.31.638008.jpg&imgrefurl=http://www.boldride.com/ride/2015/land-rover-range-rover-evoque-autobiography-dynamic&h=1333&w=2000&tbnid=-SOTeyTbEghdiM:&zoom=1&docid=3YeLRHOS08v3mM&ei=ocVCVYq5BtOu7AbpvYGoBg&tbm=isch&ved=0CDMQMygBMAE3", :title => "Photo 1"}
+    %img{:alt => "Photo 1", :src => "images/thumb_photo1.jpg"}/
+  %a{:href => "images/photo2.jpg", :title => "Photo 2"}
+    %img{:alt => "Photo 2", :src => "images/thumb_photo2.jpg"}/
+  %a{:href => "images/photo3.jpg", :title => "Photo 3"}
+    %img{:alt => "Photo 3", :src => "images/thumb_photo3.jpg"}/
+
+:javascript
+  blueimp.Gallery(
+    document.getElementById('links').getElementsByTagName('a'),
+    {
+      container: '#blueimp-gallery-carousel',
+      carousel: true
+    }
+  );
+
+:javascript
+  document.getElementById('links').onclick = function (event) {
+    event = event || window.event;
+    var target = event.target || event.srcElement,
+      link = target.src ? target.parentNode : target,
+      options = {index: link, event: event},
+      links = this.getElementsByTagName('a');
+    blueimp.Gallery(links, options);
+  };

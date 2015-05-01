@@ -13,9 +13,72 @@
  */
 
 @import "jquery.fileupload-ui";
+// import the CSS framework
+@import "bootstrap-sprockets";
+@import "home";
 @import "bootstrap";
 
-@import "blueimp-gallery-all"
-@import "blueimp-gallery"
-@import "blueimp-gallery-indicator"
-@import "blueimp-gallery-video"
+@import "blueimp-gallery-all";
+@import "blueimp-gallery";
+@import "blueimp-gallery-indicator";
+@import "blueimp-gallery-video";
+
+// make all images responsive by default
+img {
+  @extend .img-responsive;
+  margin: 0 auto;
+  }
+// override for the 'Home' navigation link
+.navbar-brand {
+  font-size: inherit;
+  }
+
+// THESE ARE EXAMPLES YOU CAN MODIFY
+// create your own classes
+// to make views framework-neutral
+.column {
+  @extend .col-md-6;
+  @extend .text-center;
+  }
+.form {
+  @extend .col-md-6;
+  }
+.form-centered {
+  @extend .col-md-6;
+  @extend .text-center;
+  }
+.submit {
+  @extend .btn;
+  @extend .btn-primary;
+  @extend .btn-lg;
+  }
+// apply styles to HTML elements
+// to make views framework-neutral
+main {
+  @extend .container;
+  padding-bottom: 80px;
+  width: 100%;
+  margin-top: 51px; // accommodate the navbar
+  }
+section {
+  @extend .row;
+  margin-top: 20px;
+  }
+
+body {
+/*css for full size background image*/
+  background: url(https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-xpf1/v/t1.0-9/11149318_1592731857676720_2099283526807633735_n.jpg?oh=263417bb626415efb59cc738eb86331f&oe=559909CC&__gda__=1439669235_eb9f2874970bbd135a0b1a61ef7a7487) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  
+  height: 100%;
+  background-color: white;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  
+ 
+}
+

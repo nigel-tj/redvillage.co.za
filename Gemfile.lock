@@ -57,6 +57,10 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    dropbox-api (0.4.2)
+      hashie
+      multi_json
+      oauth
     erb2haml (0.1.5)
       html2haml
     erubis (2.7.0)
@@ -72,6 +76,7 @@ GEM
       haml (>= 4.0.6, < 5.0)
       html2haml (>= 1.0.1)
       railties (>= 4.0.1)
+    hashie (3.4.1)
     hike (1.2.3)
     html2haml (2.0.0)
       erubis (~> 2.7.0)
@@ -103,6 +108,7 @@ GEM
     netrc (0.8.0)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
+    oauth (0.4.7)
     orm_adapter (0.5.0)
     pg (0.18.1)
     polyglot (0.3.5)
@@ -188,6 +194,7 @@ DEPENDENCIES
   carrierwave
   coffee-rails (~> 4.0.0)
   devise
+  dropbox-api
   erb2haml
   fullcalendar-rails
   haml-rails
@@ -195,6 +202,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-fileupload-rails
   jquery-rails
+  multi_json
   pg
   rails (= 4.1.5)
   rails_12factor

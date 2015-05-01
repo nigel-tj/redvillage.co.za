@@ -31,7 +31,7 @@ Rails.application.routes.draw do
   match 'gallery' => 'gallery#index', :as => 'gallery', :via => :get
   match '/calendar'   => 'home#calendar', :via => :get
   match 'admins' => 'admins#index', :via => :get
-  match 'uploads' => 'uploads#new', :via => :get
+  match 'uploads' => 'documents#new', :via => :get
   match 'user' => 'user#index', :via => :get
   match '/store' => 'home#store', :via => :get
   match '/trends' => 'home#trends', :via => :get
