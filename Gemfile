@@ -63,6 +63,13 @@ group :production do
   gem "rails_12factor"
 end
 
+
 gem 'oauth'
 
 gem 'twitter'
+
+gem 'blueimp-gallery'
+gem "dropbox-api"
+gem 'multi_json'
+
+gem 'blueimp-gallery'

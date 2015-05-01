@@ -1,50 +1,57 @@
+<<<<<<< HEAD
 .col-lg-10.col-md-9.col-sm-12
-  / <div class="col-sm-8">
-  / <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-  / <\!-- Indicators -\->
-  / <ol class="carousel-indicators">
-  / <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-  / <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-  / <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-  / </ol>
-  / Wrapper for slides
-  / <div class="carousel-inner" role="listbox">
-  / <div class="item active">
-  / <img src="images/slide-1.jpg" alt="red village image">
-  / <div class="carousel-caption">
-  / ...
-  / </div>
-  / </div>
-  / <haml_silent> @images.each do |image| </haml_silent><haml_block>
-  / <div class="item">
-  / <img src="images/uploads/<haml_loud> image.split(&#39;/&#39;).last </haml_loud>" alt="red village image">
-  / <div class="carousel-caption">
-  / <haml_loud> image </haml_loud>
-  / </div>
-  / </div>
-  / </haml_block>
-  / </div>
-  / </div>
-  / </div>
-  / <div class="col-sm-4">
-  / <div class="front-content-blocks clearfix">
-  / <h3 style="color: #ff0000">Comments</h3>
-  / <form class="form-horizontal" role="form">
-  / <div class="form-group">
-  / <input type="text" class="form-control" id="input10" placeholder="Write a comment">
-  / </div>
-  / </form>
-  / </div>
-  / </div>
-  #cp_widget_354acea7-a4a7-4724-a455-37d2b37c06d2 ...
-  :javascript
-    var cpo = []; cpo["_object"] ="cp_widget_354acea7-a4a7-4724-a455-37d2b37c06d2"; cpo["_fid"] = "AUAA3ic7oYrv";
-    var _cpmp = _cpmp || []; _cpmp.push(cpo);
-    (function() { var cp = document.createElement("script"); cp.type = "text/javascript";
-    cp.async = true; cp.src = "//www.cincopa.com/media-platform/runtime/libasync.js";
-    var c = document.getElementsByTagName("script")[0];
-    c.parentNode.insertBefore(cp, c); })();
-  %noscript
-    Powered by Cincopa
-    %a{:href => "http://www.cincopa.com/video-hosting"} Video Hosting for Business
-    solution.
+  #blueimp-gallery.blueimp-gallery
+    .slides
+      %h3.title
+      %a.prev ‹
+      %a.next ›
+      %a.close ×
+      %a.play-pause
+      %ol.indicator
+#blueimp-gallery-carousel.blueimp-gallery.blueimp-gallery-carousel
+  .slides
+  %h3.title
+  %a.prev ‹
+  %a.next ›
+  %a.play-pause
+  %ol.indicator
+
+#links
+  %a{:href => "http://www.google.com/imgres?imgurl=http://cdn.boldride.com/land-rover/2015/land-rover-range-rover-evoque-autobiography-dynamic.2000x1333.Feb-17-2014_17.50.31.638008.jpg&imgrefurl=http://www.boldride.com/ride/2015/land-rover-range-rover-evoque-autobiography-dynamic&h=1333&w=2000&tbnid=-SOTeyTbEghdiM:&zoom=1&docid=3YeLRHOS08v3mM&ei=ocVCVYq5BtOu7AbpvYGoBg&tbm=isch&ved=0CDMQMygBMAE3", :title => "Photo 1"}
+    %img{:alt => "Photo 1", :src => "images/thumb_photo1.jpg"}/
+  %a{:href => "images/photo2.jpg", :title => "Photo 2"}
+    %img{:alt => "Photo 2", :src => "images/thumb_photo2.jpg"}/
+  %a{:href => "images/photo3.jpg", :title => "Photo 3"}
+    %img{:alt => "Photo 3", :src => "images/thumb_photo3.jpg"}/
+
+:javascript
+  blueimp.Gallery(
+    document.getElementById('links').getElementsByTagName('a'),
+    {
+      container: '#blueimp-gallery-carousel',
+      carousel: true
+    }
+  );
+
+:javascript
+  document.getElementById('links').onclick = function (event) {
+    event = event || window.event;
+    var target = event.target || event.srcElement,
+      link = target.src ? target.parentNode : target,
+      options = {index: link, event: event},
+      links = this.getElementsByTagName('a');
+    blueimp.Gallery(links, options);
+  };
+=======
+%div.col-lg-10.col-md-9.col-sm-12
+  %div.blueimp-gallery#blueimp-gallery
+    %div.slides %div
+      %h3.title %h3
+       %a.prev ‹ %a
+       %a.next › %a
+       %a.close × %a
+       %a.play-pause %a
+       %ol.indicator %ol
+  %div
+%div
+>>>>>>> serverfix

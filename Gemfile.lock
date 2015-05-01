@@ -34,6 +34,8 @@ GEM
     bcrypt (3.1.7)
     bcrypt-ruby (3.1.5)
       bcrypt (>= 3.1.3)
+    blueimp-gallery (2.11.0.1)
+      railties (>= 3.1.0)
     bootstrap-sass (3.2.0.2)
       sass (~> 3.2)
     buftok (0.2.0)
@@ -57,7 +59,14 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+<<<<<<< HEAD
     equalizer (0.0.11)
+=======
+    dropbox-api (0.4.2)
+      hashie
+      multi_json
+      oauth
+>>>>>>> fd31869e43b26338c18c51f9bc711cbdf918754b
     erb2haml (0.1.5)
       html2haml
     erubis (2.7.0)
@@ -75,6 +84,7 @@ GEM
       haml (>= 4.0.6, < 5.0)
       html2haml (>= 1.0.1)
       railties (>= 4.0.1)
+    hashie (3.4.1)
     hike (1.2.3)
     html2haml (2.0.0)
       erubis (~> 2.7.0)
@@ -206,10 +216,12 @@ DEPENDENCIES
   autoprefixer-rails
   bcrypt (= 3.1.7)
   bcrypt-ruby
+  blueimp-gallery
   bootstrap-sass
   carrierwave
   coffee-rails (~> 4.0.0)
   devise
+  dropbox-api
   erb2haml
   fullcalendar-rails
   haml-rails
@@ -217,7 +229,11 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-fileupload-rails
   jquery-rails
+<<<<<<< HEAD
   oauth
+=======
+  multi_json
+>>>>>>> fd31869e43b26338c18c51f9bc711cbdf918754b
   pg
   rails (= 4.1.5)
   rails_12factor
